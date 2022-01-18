@@ -19,7 +19,7 @@ const Form = () => {
           whileHover={{ scale: 2, rotate: 360 }}
           className="fas fa-arrow-right fa-2x"
           style={{
-            color: '#fdfdfd',
+            color: '#3d3d3d',
           }}
         ></ArrowButton>
       </div>
@@ -33,9 +33,9 @@ const StyledForm = styled.div`
   justify-content: center;
   width: 100%;
   height: 100vh;
-
+  color: #3d3d3d;
   margin: 0 auto;
-  background: #f89668;
+  /* background: #f89668; */
   .container {
     display: flex;
     align-items: center;
@@ -47,10 +47,10 @@ const StyledForm = styled.div`
       display: flex;
       align-items: center;
       justify-content: center;
-      margin: 0 0 2rem 2rem;
+      margin: 0 0 1.5rem 2rem;
       background: #fdfdfd;
-      height: 50px;
-      width: 50px;
+      height: 2.5rem;
+      width: 2.5rem;
       border-radius: 5px;
       text-align: center;
       box-shadow: 0px 5px 10px 2px rgba(0, 0, 0, 0.2);
