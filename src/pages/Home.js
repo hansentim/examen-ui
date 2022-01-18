@@ -1,13 +1,13 @@
 import { useNavigate } from 'react-router-dom';
 //Styles
 import styled from 'styled-components';
+import MyComponent from './Endpage';
 
 const Home = () => {
   const navigate = useNavigate();
   return (
     <StyledContainer>
       <Hero>
-        {/* <BouncingBall /> */}
         <h3>WELCOME.</h3>
         <h1>LET'S GET SH*T DONE!</h1>
         <p>

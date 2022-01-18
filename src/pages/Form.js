@@ -35,10 +35,13 @@ const StyledForm = styled.div`
   height: 100vh;
   color: #3d3d3d;
   margin: 0 auto;
+
   /* background: #f89668; */
   .container {
     display: flex;
     align-items: center;
+    padding: 2rem 0;
+
     .formBox {
       display: flex;
       flex-direction: column;
@@ -53,7 +56,7 @@ const StyledForm = styled.div`
       width: 2.5rem;
       border-radius: 5px;
       text-align: center;
-      box-shadow: 0px 5px 10px 2px rgba(0, 0, 0, 0.2);
+      box-shadow: 0px 2px 4px 2px rgba(0, 0, 0, 0.1);
       font-size: 2rem;
       font-weight: 700;
     }
@@ -63,10 +66,10 @@ const StyledForm = styled.div`
 const FormCard = styled.div`
   background: #fdfdfd;
   width: 30vw;
-  height: 50vh;
+  height: 55vh;
   margin: 0 2rem;
   border-radius: 5px;
-  box-shadow: 0px 10px 20px 2px rgba(0, 0, 0, 0.2);
+  box-shadow: 0px 6px 15px 2px rgba(0, 0, 0, 0.1);
 `;
 
 const ArrowButton = styled(motion.button)`
