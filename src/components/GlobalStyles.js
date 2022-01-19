@@ -12,8 +12,8 @@ const GlobalStyles = createGlobalStyle`
         height: 90vh;
         font-family: 'Montserrat', sans-serif;
         color: #202020;
+        overflow-x: hidden;
        
-   
         }
 
    

@@ -1,29 +1,35 @@
+import { useNavigate } from 'react-router-dom';
 //Styles & Animation
 import styled from 'styled-components';
 import { motion } from 'framer-motion';
+import AnimatedPage from '../components/AnimatedPage';
 
 const Form = () => {
+  const navigate = useNavigate();
   return (
-    <StyledForm>
-      <div className="container">
-        <div className="formBox">
-          <div className="letterBox">A</div>
-          <FormCard>form a</FormCard>
+    <AnimatedPage>
+      <StyledForm>
+        <div className="container">
+          <div className="formBox">
+            <div className="letterBox">A</div>
+            <FormCard>form a</FormCard>
+          </div>
+          <div className="formBox">
+            <div className="letterBox">B</div>
+            <FormCard>form b</FormCard>
+          </div>
+          {/* rotera pilen */}
+          <ArrowButton
+            onClick={() => navigate('/thanks')}
+            whileHover={{ scale: 2, rotate: 360 }}
+            className="fas fa-arrow-right fa-2x"
+            style={{
+              color: '#3d3d3d',
+            }}
+          ></ArrowButton>
         </div>
-        <div className="formBox">
-          <div className="letterBox">B</div>
-          <FormCard>form b</FormCard>
-        </div>
-        {/* rotera pilen */}
-        <ArrowButton
-          whileHover={{ scale: 2, rotate: 360 }}
-          className="fas fa-arrow-right fa-2x"
-          style={{
-            color: '#3d3d3d',
-          }}
-        ></ArrowButton>
-      </div>
-    </StyledForm>
+      </StyledForm>
+    </AnimatedPage>
   );
 };
 

@@ -1,23 +1,25 @@
 import { useNavigate } from 'react-router-dom';
 //Styles
 import styled from 'styled-components';
-import MyComponent from './Endpage';
+import AnimatedPage from '../components/AnimatedPage';
 
 const Home = () => {
   const navigate = useNavigate();
   return (
-    <StyledContainer>
-      <Hero>
-        <h3>WELCOME.</h3>
-        <h1>LET'S GET SH*T DONE!</h1>
-        <p>
-          We are grateful that you can take a moment of your time to answer some
-          of our questions. This research will be for our exam and to start,
-          simply press the “Start” button and follow the Google Form.
-        </p>
-        <button onClick={() => navigate('/form')}>LET'S START!</button>
-      </Hero>
-    </StyledContainer>
+    <AnimatedPage>
+      <StyledContainer>
+        <Hero>
+          <h3>WELCOME.</h3>
+          <h1>LET'S GET SH*T DONE!</h1>
+          <p>
+            We are grateful that you can take a moment of your time to answer
+            some of our questions. This research will be for our exam and to
+            start, simply press the “Start” button and follow the Google Form.
+          </p>
+          <button onClick={() => navigate('/form')}>LET'S START!</button>
+        </Hero>
+      </StyledContainer>
+    </AnimatedPage>
   );
 };
 

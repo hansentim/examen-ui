@@ -37,6 +37,8 @@ const HeartContainer = styled.div`
   }
 `;
 
-const Heart = styled(motion.div)``;
+const Heart = styled(motion.div)`
+  padding-top: 2rem;
+`;
 
 export default MyComponent;
