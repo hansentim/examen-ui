@@ -7,6 +7,7 @@ import EndPage from './pages/Endpage';
 import GlobalStyles from './components/GlobalStyles';
 import { AnimatePresence } from 'framer-motion';
 
+//Använd location.pathname för att ge Routes en unik key.
 function App() {
   const location = useLocation();
   return (
@@ -24,3 +25,5 @@ function App() {
 }
 
 export default App;
+
+//React "unmounts" vår komponent när vi går till en ny route så vår page transition animation fungerar inte. Då kan vi använda AnimatePrecense och det den gör är att kolla key för sina children och om key har ändrats väntar den med att unmounta komponenenterna innan exit animeringen/förändringen har skett. Efter animeringen skett mountar react komponenten till skärmen.

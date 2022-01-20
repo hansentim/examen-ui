@@ -1,22 +1,11 @@
 import { motion } from 'framer-motion';
 import styled from 'styled-components';
 import heart from '../img/heart-solid.svg';
+import { heartAnimation } from '../animations';
 
-export const MyComponent = () => (
+export const AnimateHeart = () => (
   <HeartContainer>
-    <Heart
-      animate={{
-        scale: [1, 2, 2, 1, 1],
-        /* rotate: [0, 0, 360, 360, 0], */
-      }}
-      transition={{
-        duration: 2,
-        ease: 'easeInOut',
-        times: [0, 0.2, 0.5, 0.8, 1],
-        repeat: Infinity,
-        repeatDelay: 1,
-      }}
-    >
+    <Heart animate="show" variants={heartAnimation}>
       {' '}
       <h1>THANK YOU!</h1>
       <img src={heart} alt="heart" />
@@ -24,6 +13,7 @@ export const MyComponent = () => (
   </HeartContainer>
 );
 
+//Style
 const HeartContainer = styled.div`
   display: grid;
   align-items: center;
@@ -41,4 +31,4 @@ const Heart = styled(motion.div)`
   padding-top: 2rem;
 `;
 
-export default MyComponent;
+export default AnimateHeart;

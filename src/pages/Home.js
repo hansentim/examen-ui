@@ -23,6 +23,8 @@ const Home = () => {
   );
 };
 
+//Style
+
 const StyledContainer = styled.div`
   display: grid;
   align-items: center;
