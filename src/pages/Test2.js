@@ -61,8 +61,42 @@ const Test2 = () => {
           <div className="formBox">
             <div className="letterBox">B</div>
             <FormCard2>
-                <h2>Registration Form</h2>
                 
+                <form action="">
+              <h2 className='formTitle'>Registration Form</h2>
+                      <div className='personalInfo'>
+                        <label>Full name</label>
+                        <input type="text" className='inputBar'></input>
+                        <label>Date of birth</label>
+                        <div className='dates'>
+                          <input type="text" placeholder="Day" className='inputBar short'></input>
+                          <input type="text" placeholder="Month" className='inputBar short'></input>
+                          <input type="text" placeholder="Year" className='inputBar short'></input>
+                        </div>
+                      </div>
+                      <div className='accountInfo'>
+                        <label>Email</label>
+                        <input type="email" className='inputBar'></input>
+                        <label>Password</label>
+                        <input type="password" className='inputBar'></input>
+                        <label>Confirm password</label>
+                        <input type="password" className='inputBar'></input>
+                      </div>
+                      <div className='contactInfo'>
+                        <label>Phone</label>
+                        <input type="tel" className='inputBar'></input>
+                        <label>Address</label>
+                        <input type="text" className='inputBar'></input>
+                        <div className='cityContainer'>
+                          <label className='item-a'>Zip code</label>
+                          <input type="text" className='inputBar medium item-b'></input>
+                          <label className='item-c'>City</label>
+                          <input type="text" className='inputBar item-d'></input>
+                        </div>
+                      </div>
+                      <input type="submit" className='button' value="Register"/>
+                    </form>
+
             </FormCard2>
           </div>
           {/* rotera pilen */}
@@ -251,6 +285,84 @@ const FormCard2 = styled.div`
   margin: 0 2rem;
   border-radius: 5px;
   box-shadow: 0px 6px 15px 2px rgba(0, 0, 0, 0.1);
+  .formTitle{
+    font-size: 2.5rem;
+    color: #f4f4f4;
+    padding: 1rem 0;
+}
+form{
+  /* background: #cdcdcd; */
+  margin: 0 auto;
+  height: 100%;
+  width: 80%;
+  
+}
+.personalInfo{
+  display: flex;
+  flex-direction: column;
+}
+.dates{
+  display: flex;
+  justify-content: space-between;
+}
+.accountInfo{
+  display: flex;
+  flex-direction: column;
+}
+.contactInfo{
+  display: flex;
+  flex-direction: column;
+}
+label{
+  color: #f4f4f4;
+  font-size: .8rem;
+  margin: .5rem 0 0 .7rem;
+}
+.inputBar{
+  height: 2.5rem;
+  border-radius: 40px;
+  border: 1px solid #3D3D3D;
+  margin: .3rem 0;
+}
+.short{
+  width: 8.5rem;
+  text-align: center;
+}
+.medium{
+  width: 9rem
+}
+.cityContainer{
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  gap: 0 15px;
+}
+.item-a{
+  grid-column: 1 / 2;
+grid-row: 1;
+}
+.item-b{
+  grid-column: 1 / 2;
+  grid-row: 2;
+}
+.item-c{
+  grid-column: 2 / 3;
+  grid-row: 1;
+}
+.item-d{
+  grid-column: 2 / 3;
+  grid-row: 2;
+}
+.button{
+  background: #218380;
+  color: #f4f4f4;
+  border-radius: 50px;
+  width: 100%;
+  height: 44px;
+  font-size: 1.1rem;
+  font-weight: bold;
+  border: none;
+  margin-top: 1rem;
+}
 `;
 
 const ArrowButton = styled(motion.button)`
