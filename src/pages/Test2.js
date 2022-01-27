@@ -361,7 +361,7 @@ grid-row: 1;
   font-size: 1.1rem;
   font-weight: bold;
   border: none;
-  margin-top: 1rem;
+  margin-top: 2.5rem;
 }
 `;
 
