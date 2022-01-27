@@ -281,7 +281,7 @@ const FormCard1 = styled.div`
 const FormCard2 = styled.div`
   background: #DA627D;
   width: 30vw;
-  height: 80vh;
+  height: 85vh;
   margin: 0 2rem;
   border-radius: 5px;
   box-shadow: 0px 6px 15px 2px rgba(0, 0, 0, 0.1);
