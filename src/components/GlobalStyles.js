@@ -12,8 +12,8 @@ const GlobalStyles = createGlobalStyle`
         @media (max-width: 1280px){
         font-size: 85%;
         }
-        @media (min-width: 1920px){
-        font-size: 120%;
+        /* @media (min-width: 1920px){
+        font-size: 120%; */
     }
 
     }
