@@ -4,7 +4,7 @@ import styled from 'styled-components';
 import { motion } from 'framer-motion';
 import AnimatedPage from '../components/AnimatedPage';
 
-const Form = () => {
+const TestOne = () => {
   const navigate = useNavigate();
   return (
     <AnimatedPage>
@@ -515,4 +515,4 @@ const ArrowButton = styled(motion.button)`
   background: none;
 `;
 
-export default Form;
+export default TestOne;
