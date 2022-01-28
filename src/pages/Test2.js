@@ -48,7 +48,7 @@ const Test2 = () => {
                           <label className='item-a'>Zip code</label>
                           <input type="text" className='inputBar medium item-b'></input>
                           <label className='item-c'>City</label>
-                          <input type="text" className='inputBar item-d'></input>
+                          <input type="text" className='inputBar mediumLong item-d'></input>
                         </div>
                       </div>
                       <input type="submit" className='button'/>
@@ -275,7 +275,31 @@ const FormCard1 = styled.div`
     font-size: 1.1rem;
     font-weight: bold;
     border: none;
-    margin-top: 1rem;
+    margin: 1.8rem;
+  }
+  @media (max-width: 1280px) {
+    width: 35vw;
+    .short{
+      width: 5rem;
+      text-align: center;
+    }
+    .medium{
+      width: 5.5rem;
+    }
+    .mediumLong{
+      width: 100%;
+    }
+  }
+  @media (min-width: 1920px) {
+    label{
+      font-size: 1rem;
+    }
+    .sectionTitle{
+      font-size: 1.2rem
+    }
+    .inputBar{
+      height: 2.2rem;
+    }
   }
 `;
 const FormCard2 = styled.div`
@@ -362,6 +386,19 @@ grid-row: 1;
   font-weight: bold;
   border: none;
   margin-top: 2.5rem;
+}
+@media (max-width: 1280px) {
+  width: 35vw;
+  .short{
+    width: 8rem;
+    text-align: center;
+  }
+}
+@media (min-width: 1920px) {
+  label{
+    font-size: 1rem;
+    margin: .7rem 0 0 .9rem;
+  }
 }
 `;
 
