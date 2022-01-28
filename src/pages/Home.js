@@ -16,7 +16,7 @@ const Home = () => {
             some of our questions. This research will be for our exam and to
             start, simply press the “Start” button and follow the Google Form.
           </p>
-          <button onClick={() => navigate('/testone')}>LET'S START!</button>
+          <button onClick={() => navigate('/test1')}>LET'S START!</button>
         </Hero>
       </StyledContainer>
     </AnimatedPage>

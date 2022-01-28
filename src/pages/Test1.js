@@ -4,7 +4,7 @@ import styled from 'styled-components';
 import { motion } from 'framer-motion';
 import AnimatedPage from '../components/AnimatedPage';
 
-const TestOne = () => {
+const Test1 = () => {
   const navigate = useNavigate();
   return (
     <AnimatedPage>
@@ -112,7 +112,7 @@ const TestOne = () => {
           </div>
           {/* rotera pilen */}
           <ArrowButton
-            onClick={() => navigate('/thanks')}
+            onClick={() => navigate('/test2')}
             whileHover={{ scale: 2, rotate: 360 }}
             className="fas fa-arrow-right fa-2x"
             style={{
@@ -515,4 +515,4 @@ const ArrowButton = styled(motion.button)`
   background: none;
 `;
 
-export default TestOne;
+export default Test1;

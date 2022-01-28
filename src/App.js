@@ -1,7 +1,7 @@
 import { Route, Routes, useLocation } from 'react-router-dom';
 //Components
 import Home from './pages/Home';
-import TestOne from './pages/TestOne';
+import Test1 from './pages/Test1';
 import Test2 from './pages/Test2';
 import Test3 from './pages/Test3';
 import EndPage from './pages/Endpage';
@@ -18,7 +18,7 @@ function App() {
       <AnimatePresence exitBeforeEnter>
         <Routes key={location.pathname} location={location}>
           <Route path="/" element={<Home />} />
-          <Route path="/testone" element={<TestOne />} />
+          <Route path="/test1" element={<Test1 />} />
           <Route path="/test2" element={<Test2 />} />
           <Route path="/test3" element={<Test3 />} />
           <Route path="/thanks" element={<EndPage />} />
