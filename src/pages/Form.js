@@ -14,44 +14,46 @@ const Form = () => {
             <div className="letterBox">A</div>
             <FormCardA>
               <StyledFormA>
-                <h1>Get Started</h1>
-                <p className="signIn">
-                  Already have an account? <span>Sign in</span>
-                </p>
-                <div className="label">
-                  <label>MY NAME IS</label>
-                  <input id="text" type="text" />
-                </div>
-                <div className="label">
-                  <label>MAIL ME @</label>
-                  <input id="text" type="email" />
-                </div>
-                <div className="label">
-                  <label>CALL ME ON</label>
-                  <input id="text" type="text" />
-                </div>
-                <div className="switchBox">
-                  {' '}
-                  <label className="switch">
-                    <input type="checkbox" />
-                    <span className="slider"></span>
-                  </label>
-                  <p>Yes, I want to receive my newsletter emails!</p>
-                </div>
-
-                <div className="switchBox">
-                  <label className="switch">
-                    <input type="checkbox" />
-                    <span className="slider"></span>
-                  </label>
-                  <p>
-                    I agree to all the <span>Terms</span> and{' '}
-                    <span>Privacy Policys</span>
+                <div className="formContainerA">
+                  <h1>Get Started</h1>
+                  <p className="signIn">
+                    Already have an account? <span>Sign in</span>
                   </p>
-                </div>
+                  <div className="label">
+                    <label>MY NAME IS</label>
+                    <input id="text" type="text" />
+                  </div>
+                  <div className="label">
+                    <label>MAIL ME AT</label>
+                    <input id="text" type="email" />
+                  </div>
+                  <div className="label">
+                    <label>CALL ME ON</label>
+                    <input id="text" type="text" />
+                  </div>
+                  <div className="switchBox">
+                    {' '}
+                    <label className="switch">
+                      <input type="checkbox" />
+                      <span className="slider"></span>
+                    </label>
+                    <p>Yes, I want to receive my newsletter emails!</p>
+                  </div>
 
-                <div className="ctBox">
-                  <button className="buttonA">SIGN UP</button>
+                  <div className="switchBox">
+                    <label className="switch">
+                      <input type="checkbox" />
+                      <span className="slider"></span>
+                    </label>
+                    <p>
+                      I agree to all the <span>Terms</span> and{' '}
+                      <span>Privacy Policys</span>
+                    </p>
+                  </div>
+
+                  <div className="ctBox">
+                    <button className="buttonA">SIGN UP</button>
+                  </div>
                 </div>
               </StyledFormA>
             </FormCardA>
@@ -62,7 +64,7 @@ const Form = () => {
             <div className="letterBox">B</div>
             <FormCardB>
               <StyledFormB>
-                <div className="formContainer">
+                <div className="formContainerB">
                   <h1>Get Started</h1>
                   <p className="signIn">
                     Already have an account? <span>Sign in</span>
@@ -86,7 +88,7 @@ const Form = () => {
                       <input type="checkbox" name="checkbox" />
                       {/* Yes, I want to receive my newsletter emails! */}
                     </label>
-                    <p>Yes, I want to receive my newsletter emails!</p>
+                    <p>Yes, I want to receive newsletter emails!</p>
                   </div>
 
                   <div className="switchBox">
@@ -190,6 +192,17 @@ const FormCardA = styled.div`
   margin: 0 2rem;
   border-radius: 10px;
   box-shadow: 0px 6px 15px 2px rgba(0, 0, 0, 0.1);
+  .formContainerA {
+    display: flex;
+    flex-direction: column;
+    margin: 2rem auto;
+    @media (min-width: 1920px) {
+      width: 80%;
+    }
+  }
+  @media (max-width: 1280px) {
+    width: 30vw;
+  }
 `;
 
 const StyledFormA = styled.form`
@@ -201,6 +214,12 @@ const StyledFormA = styled.form`
     letter-spacing: 1px;
     font-weight: 600;
     padding-top: 2.5rem;
+    @media (max-width: 1280px) {
+      padding-top: 1rem;
+    }
+    @media (min-width: 1920px) {
+      padding-top: 4rem;
+    }
   }
   .signIn {
     padding-bottom: 3rem;
@@ -230,12 +249,16 @@ const StyledFormA = styled.form`
     font-size: 0.7rem;
     display: flex;
     padding-bottom: 1.9rem;
-    margin-right: 0.2rem;
-    /* justify-content: center; */
     align-items: center;
+    @media (max-width: 1280px) {
+      padding-bottom: 1.5rem;
+    }
+    @media (min-width: 1920px) {
+      padding-bottom: 3rem;
+    }
   }
   label {
-    padding-right: 0.3rem;
+    padding-right: 0.5rem;
   }
   .switch {
     font-size: 17px;
@@ -306,6 +329,9 @@ const StyledFormA = styled.form`
     transition: all 0.3s ease 0s;
     cursor: pointer;
     outline: none;
+    @media (min-width: 1920px) {
+      margin-top: 2rem;
+    }
   }
   .buttonA:hover {
     background-color: #fc9919;
@@ -325,19 +351,22 @@ const FormCardB = styled.div`
   height: 65vh;
   margin: 0 2rem;
   border-radius: 10px;
+  @media (max-width: 1280px) {
+    width: 30vw;
+  }
 `;
 
 const StyledFormB = styled.form`
   color: #4a5759;
   width: 100%;
-  .formContainer {
+  .formContainerB {
     display: flex;
     flex-direction: column;
     width: 70%;
-    /* justifyContent: 'left', */
-    /* alignItems: 'left', */
-
     margin: 2rem auto;
+    @media (min-width: 1920px) {
+      width: 60%;
+    }
   }
   h1 {
     color: #4a5759;
@@ -345,20 +374,25 @@ const StyledFormB = styled.form`
     font-size: 2.2rem;
     letter-spacing: 1px;
     font-weight: 600;
+    @media (min-width: 1920px) {
+      padding-top: 4rem;
+    }
   }
   .signIn {
     padding-bottom: 3rem;
     text-align: left;
     font-size: 0.7rem;
+    @media (max-width: 1280px) {
+      padding-bottom: 2rem;
+    }
   }
   #text {
     background: none;
     border: none;
     border-bottom: 1.5px solid #4a5759;
     outline: none;
-    /* padding-right: 1rem; */
     width: 100%;
-    color: #b0c4b1;
+    color: #4a5759;
   }
   .ctBox {
     /*  display: flex;
@@ -418,10 +452,16 @@ const StyledFormB = styled.form`
     display: flex;
     flex-direction: column;
     padding-bottom: 1.9rem;
+    @media (max-width: 1280px) {
+      padding-bottom: 0.7rem;
+    }
     label {
       padding-right: 0.3rem;
       padding-bottom: 1rem;
       color: #4a5759;
+      @media (max-width: 1280px) {
+        padding-bottom: 0.7rem;
+      }
     }
 
     /* margin-right: 0.2rem; */
@@ -454,6 +494,9 @@ const StyledFormB = styled.form`
     transition: all 0.3s ease 0s;
     cursor: pointer;
     outline: none;
+    @media (min-width: 1920px) {
+      margin-top: 1.5rem;
+    }
   }
   .buttonA:hover {
     background-color: #eca17c;
