@@ -9,8 +9,18 @@ const Test2 = () => {
   return (
     <AnimatedPage>
       <StyledForm>
+      
         <div className="a-container">
+        <ArrowButton
+            onClick={() => navigate('/test3')}
+            whileHover={{ scale: 2, rotate: 360 }}
+            className="fas fa-arrow-left fa-2x"
+            style={{
+              color: '#EE6C4D',
+            }}
+          ></ArrowButton>
           <div className="formBox">
+            
             <div className="letterBox">A</div>
             <FormCard1>
                 <h2 className='formTitle'>Registration Form</h2>
@@ -237,10 +247,12 @@ const FormCard1 = styled.div`
     border-radius: 40px;
     border: 1px solid #3D3D3D;
     margin: .3rem 0;
+    padding-left: .5rem
   }
   .short{
     width: 5.5rem;
     text-align: center;
+    padding-right: .5rem
   }
   .medium{
     width: 6rem
@@ -279,6 +291,17 @@ const FormCard1 = styled.div`
   }
   @media (max-width: 1280px) {
     width: 35vw;
+    .formTitle{
+      font-size: 1.8rem
+    }
+    .sectionTitle{
+      font-size: 0.8rem
+    }
+    .inputBar{
+      height: 1.5rem;
+      font-size: .8rem;
+      margin: .15rem 0;
+    }
     .short{
       width: 5rem;
       text-align: center;
@@ -288,6 +311,12 @@ const FormCard1 = styled.div`
     }
     .mediumLong{
       width: 100%;
+    }
+    .button{
+    width: 144px;
+    height: 32px;
+    font-size: .9rem;
+    margin: 1.2rem 3rem;
     }
   }
   @media (min-width: 1920px) {
