@@ -418,10 +418,44 @@ grid-row: 1;
 }
 @media (max-width: 1280px) {
   width: 35vw;
+  .formTitle{
+    font-size: 1.8rem
+  }
+  .sectionTitle{
+    font-size: 0.8rem
+  }
+  .inputBar{
+    height: 2rem;
+    font-size: .8rem;
+    margin: .15rem 0;
+  }
   .short{
     width: 8rem;
     text-align: center;
   }
+  .medium{
+    width: 5.5rem;
+  }
+  .mediumLong{
+    width: 100%;
+  }
+  .button{
+    height: 32px;
+  font-size: 0.9rem;
+  margin-top: 1.5rem;
+  }
+}
+@media (min-width: 1920px) {
+  label{
+    font-size: 1rem;
+  }
+  .sectionTitle{
+    font-size: 1.2rem
+  }
+  .inputBar{
+    height: 2.2rem;
+  }
+}
 }
 @media (min-width: 1920px) {
   label{
