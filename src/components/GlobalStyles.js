@@ -6,15 +6,16 @@ const GlobalStyles = createGlobalStyle`
         margin: 0;
         padding:0;
         box-sizing: border-box;
+       
     }
 
     html{
         @media (max-width: 1280px){
         font-size: 85%;
         }
-        /* @media (min-width: 1920px){
-        font-size: 120%; */
-    }
+       /*  @media (min-width: 1920px){
+        font-size: 120%;
+    } */
 
     }
    body{

@@ -5,6 +5,7 @@ import Test1 from './pages/Test1';
 import Test2 from './pages/Test2';
 import Test3 from './pages/Test3';
 import EndPage from './pages/Endpage';
+import AnimationTest from './pages/AnimationTest';
 //Styles
 import GlobalStyles from './components/GlobalStyles';
 import { AnimatePresence } from 'framer-motion';
@@ -22,6 +23,7 @@ function App() {
           <Route path="/test2" element={<Test2 />} />
           <Route path="/test3" element={<Test3 />} />
           <Route path="/thanks" element={<EndPage />} />
+          <Route path="/animationtest" element={<AnimationTest />} />
         </Routes>
       </AnimatePresence>
     </div>
