@@ -134,14 +134,15 @@ const AnimContainer = styled.div`
 `;
 
 const StyledAnim = styled.div`
-  min-height: 100vh;
+  min-height: 90vh;
   width: 90vw;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 15rem 10rem 0 10rem;
+  /* display: flex; */
+  /*   align-items: center;
+  justify-content: center; */
+  padding: 10rem 10rem 0 10rem;
   /* background-color: #fefefe; */
-  margin: 0 auto;
+  background-color: tomato;
+  margin: 2rem auto;
 
   @media (max-width: 1280px) {
     display: block;
