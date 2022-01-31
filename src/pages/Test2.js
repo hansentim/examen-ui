@@ -211,7 +211,6 @@ const FormCard1 = styled.div`
       margin-top: 1rem;
   }
   form{
-    /* background: #cdcdcd; */
     margin: 0 auto;
     height: 100%;
     width: 50%;
@@ -246,7 +245,7 @@ const FormCard1 = styled.div`
     height: 2rem;
     border-radius: 40px;
     border: 1px solid #3D3D3D;
-    margin: .3rem 0;
+    margin: .2rem 0;
     padding-left: .5rem
   }
   .short{
@@ -287,7 +286,7 @@ const FormCard1 = styled.div`
     font-size: 1.1rem;
     font-weight: bold;
     border: none;
-    margin: 1.8rem;
+    margin: 1rem 1.8rem;
   }
   @media (max-width: 1280px) {
     width: 35vw;
@@ -321,13 +320,16 @@ const FormCard1 = styled.div`
   }
   @media (min-width: 1920px) {
     label{
-      font-size: 1rem;
+      font-size: .8rem;
     }
     .sectionTitle{
       font-size: 1.2rem
     }
     .inputBar{
-      height: 2.2rem;
+      height: 2rem;
+    }
+    .button{
+    margin: 1.2rem 3rem;
     }
   }
 `;
