@@ -12,7 +12,7 @@ const Test2 = () => {
       
         <div className="a-container">
         <ArrowButton
-            onClick={() => navigate('/test3')}
+            onClick={() => navigate('/test1')}
             whileHover={{ scale: 2, rotate: 360 }}
             className="fas fa-arrow-left fa-2x"
             style={{
