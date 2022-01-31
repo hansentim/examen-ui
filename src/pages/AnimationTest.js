@@ -1,9 +1,7 @@
 import { useNavigate } from 'react-router-dom';
-import styled from 'styled-components';
-//import { StyledAbout } from '../styles';
 import Toggle from '../components/Toggle';
-//import bgImage from '../img/bg.svg';
-//import bgImage from '../img/layers.svg';
+//Style and animation
+import styled from 'styled-components';
 import { AnimateSharedLayout } from 'framer-motion';
 import { motion } from 'framer-motion';
 //import { useScroll } from '../useScroll';
@@ -143,7 +141,6 @@ const StyledAnim = styled.div`
   justify-content: space-between;
   padding: 15rem 10rem 0 10rem;
   /* background-color: #fefefe; */
-
   margin: 0 auto;
 
   @media (max-width: 1280px) {
