@@ -4,7 +4,7 @@ import styled from 'styled-components';
 import { motion } from 'framer-motion';
 import AnimatedPage from '../components/AnimatedPage';
 
-const Test2 = () => {
+const Test3 = () => {
   const navigate = useNavigate();
   return (
     <AnimatedPage>
@@ -242,7 +242,7 @@ const FormCard1 = styled.div`
     display: flex;
     justify-content: left;
     align-items: center;
-    padding-bottom: 1rem;
+    padding-bottom: 1.5rem;
     h5{
       font-size: 1.2rem;
       margin-left: 1.5rem
@@ -297,7 +297,7 @@ const FormCard2 = styled.div`
     display: flex;
     justify-content: left;
     align-items: center;
-    padding-bottom: 1rem;
+    padding-bottom: 1.5rem;
     h5{
       font-size: 1.2rem;
       margin-left: 1.5rem
@@ -355,4 +355,4 @@ const ArrowButton = styled(motion.button)`
   background: none;
 `;
 
-export default Test2;
+export default Test3;
