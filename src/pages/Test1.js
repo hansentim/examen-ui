@@ -196,12 +196,12 @@ const FormCardA = styled.div`
     display: flex;
     flex-direction: column;
     margin: 2rem auto;
+    @media (max-width: 1280px) {
+      width: 30vw;
+    }
     @media (min-width: 1920px) {
       width: 80%;
     }
-  }
-  @media (max-width: 1280px) {
-    width: 30vw;
   }
 `;
 

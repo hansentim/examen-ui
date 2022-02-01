@@ -10,6 +10,52 @@ export const heartAnimation = {
   },
 };
 
+export const pageAnimation = {
+  hidden: { x: -800, opacity: 0 },
+  show: {
+    x: 0,
+    opacity: 1,
+    transition: {
+      duration: 0.5,
+      ease: 'easeOut',
+
+      staggerChildren: 0.25,
+    },
+  },
+};
+
+export const titleAnim = {
+  hidden: { x: -800 },
+  show: {
+    x: 0,
+    transition: {
+      duration: 0.75,
+      ease: 'easeOut',
+      /* staggerChildren: 0.5, */
+    },
+  },
+};
+export const pageAnimationB = {
+  hidden: { x: 800, opacity: 0 },
+  show: {
+    x: 0,
+    opacity: 1,
+    transition: { duration: 1, ease: 'easeOut', staggerChildren: 0.5 },
+  },
+};
+
+export const titleAnimB = {
+  hidden: { x: 800 },
+  show: {
+    x: 0,
+    transition: {
+      duration: 1.5,
+      ease: 'easeOut',
+      /* staggerChildren: 0.5, */
+    },
+  },
+};
+
 export const fadeSlow = {
   hidden: { opacity: 0 },
   show: {
@@ -38,16 +84,5 @@ export const fadeSuperFast = {
   show: {
     opacity: 1,
     transition: { ease: 'easeIn', duration: 0.2 },
-  },
-};
-
-export const scrollReveal = {
-  hidden: { opacity: 0, scale: 1.2, transition: { duration: 0.5 } },
-  show: {
-    opacity: 1,
-    scale: 1,
-    transition: {
-      duration: 0.5,
-    },
   },
 };
