@@ -65,7 +65,38 @@ const Test4 = () => {
           <div className="formBox">
             <div className="letterBox">B</div>
             <FormCard2>
-           
+            <div className='formContainer'>
+              <img src={logo} alt="" />
+              <h5>Vi tar hand om dina uppgifter</h5>
+              <p>Chilla vill ge dig en säker och god upplevelse. För detta använder vi kakor. Vissa av dessa kakor är nödvändiga för att vår hemsida ska fungera, så ät inte upp de! Andra kakor hjälper dig få en skräddarsydd upplevelse. Genom att trycka på "ACCEPTERA" godkänner du användningen av de kakor som är markerade. </p>
+              <button>ACCEPTERA</button>
+              <div className='switchGrid'>
+                <div className="switchBox">
+                  <label className="form-control">
+                    <input type="checkbox"/>
+                  </label>
+                  <h4>Nödvändiga</h4>
+                  </div>
+                  <div className="switchBox">
+                    <label className="form-control">
+                      <input type="checkbox"/>
+                    </label>
+                    <h4>Funktionella</h4>
+                  </div>
+                  <div className="switchBox">
+                    <label className="form-control">
+                      <input type="checkbox"/>
+                    </label>
+                    <h4>Statistiska</h4>
+                  </div>
+                  <div className="switchBox">
+                    <label className="form-control">
+                      <input type="checkbox"/>
+                    </label>
+                    <h4>Marketing</h4>
+                </div>
+              </div>
+            </div>
             </FormCard2>
           </div>
           {/* rotera pilen */}
@@ -257,6 +288,81 @@ const FormCard2 = styled.div`
   margin: 0 2rem;
   border-radius: 5px;
   box-shadow: 0px 6px 15px 2px rgba(0, 0, 0, 0.1);
+
+  .formContainer {
+    height: 100%;
+    display:flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: column;
+    padding: 1rem 4rem;
+    img{
+        margin-top: 1rem;
+        height: 5rem;
+        }
+    h4{
+      padding-top: .5rem;
+    }
+    h5{
+        padding-top: 1.5rem;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+    }
+    p{
+        padding-top: 1.5rem;
+        text-align: center;
+    }
+    button{
+        margin-top: 1rem;
+        padding: 1rem 2rem;
+        background: #036440;
+        color: #f4f4f4;
+        border: none;
+        border-radius: 5px;
+    }
+    
+  }
+  .switchGrid{
+    padding-top: 3rem;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 3rem 4rem;
+  }
+  .switchBox {
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    flex-direction: column;
+  }
+  input[type='checkbox'] {
+    /* Add if not using autoprefixer */
+    -webkit-appearance: none;
+
+    /* font: inherit; */
+
+    color: currentColor;
+    width: 1.5em;
+    height: 1.5em;
+    border: 0.15em solid currentColor;
+    border-radius: 0.15em;
+    transform: translateY(-0.075em);
+    display: grid;
+    place-content: center;
+  }
+  input[type='checkbox']::before {
+    content: '';
+    width: 0.65em;
+    height: 0.65em;
+    clip-path: polygon(14% 44%, 0 65%, 50% 100%, 100% 16%, 80% 0%, 43% 62%);
+    transform: scale(0);
+    transform-origin: bottom left;
+    transition: 120ms transform ease-in-out;
+    background-color: #000;
+    
+  }
+  input[type='checkbox']:checked::before {
+    transform: scale(1);
+  }
 
 `;
 
