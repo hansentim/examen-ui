@@ -55,6 +55,17 @@ export const titleAnimB = {
     },
   },
 };
+export const titleAnimC = {
+  hidden: { y: -1200 },
+  show: {
+    y: 0,
+    transition: {
+      duration: 1.5,
+      ease: 'easeOut',
+      /* staggerChildren: 0.5, */
+    },
+  },
+};
 
 export const fadeSlow = {
   hidden: { opacity: 0 },
@@ -83,7 +94,7 @@ export const fadeSuperFast = {
   hidden: { opacity: 0 },
   show: {
     opacity: 1,
-    transition: { ease: 'easeIn', duration: 0.2 },
+    transition: { ease: 'easeIn', duration: 0.4 },
   },
 };
 

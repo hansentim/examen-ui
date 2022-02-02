@@ -1,11 +1,12 @@
 import { useNavigate } from 'react-router-dom';
-//Style and animation
+//Components
 import AnimatedPage from '../components/AnimatedPage';
+//Style & animation
 import { motion } from 'framer-motion';
 import styled from 'styled-components';
+//Import av animationer
 import {
   titleAnim,
-  fade,
   pageAnimation,
   fadeFaster,
   pageAnimationB,
@@ -119,7 +120,6 @@ const StyledAnimTwoContainer = styled.div`
   display: flex;
   width: 100%;
   height: 100vh;
-
   margin: 0 auto;
   .one,
   .two,
@@ -134,11 +134,10 @@ const StyledAnimTwoContainer = styled.div`
     min-height: 8vh;
     width: 40vw;
     border-radius: 50px;
-
-    /* padding: 0 2rem; */
     margin-bottom: 0.5rem;
   }
-  /* From cssbuttons.io by @alexmaracinaru */
+
+  //Animerad button
   .cta {
     position: relative;
     margin: auto;
@@ -148,7 +147,6 @@ const StyledAnimTwoContainer = styled.div`
     background: none;
     margin-top: 2rem;
   }
-
   .cta:before {
     content: '';
     position: absolute;
@@ -161,7 +159,6 @@ const StyledAnimTwoContainer = styled.div`
     height: 47px;
     transition: all 0.3s ease;
   }
-
   .cta span {
     position: relative;
     font-family: 'Ubuntu', sans-serif;
@@ -170,7 +167,6 @@ const StyledAnimTwoContainer = styled.div`
     letter-spacing: 0.05em;
     color: #46493b;
   }
-
   .cta svg {
     position: relative;
     top: 0;
@@ -183,21 +179,19 @@ const StyledAnimTwoContainer = styled.div`
     transform: translateX(-5px);
     transition: all 0.3s ease;
   }
-
   .cta:hover:before {
     width: 100%;
     background: #b7b7a4;
   }
-
   .cta:hover svg {
     transform: translateX(0);
   }
-
   .cta:active {
     transform: scale(0.95);
   }
 `;
 
+//Test A
 const ContainerA = styled.div`
   display: flex;
   align-items: center;
@@ -241,6 +235,7 @@ const ContainerA = styled.div`
   }
 `;
 
+//Test B
 const ContainerB = styled.div`
   display: flex;
   align-items: center;
