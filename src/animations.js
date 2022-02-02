@@ -86,3 +86,11 @@ export const fadeSuperFast = {
     transition: { ease: 'easeIn', duration: 0.2 },
   },
 };
+
+export const endFade = {
+  hidden: { opacity: 0 },
+  show: {
+    opacity: 1,
+    transition: { ease: 'easeIn', duration: 2 },
+  },
+};
