@@ -98,19 +98,19 @@ const Test3 = () => {
                   </div>
                   <div className="switchBox">
                     <label className="form-control">
-                      <input type="checkbox" />
+                      <input type="checkbox" defaultChecked/>
                     </label>
                     <h4>Funktionella</h4>
                   </div>
                   <div className="switchBox">
                     <label className="form-control">
-                      <input type="checkbox" />
+                      <input type="checkbox" defaultChecked/>
                     </label>
                     <h4>Statistiska</h4>
                   </div>
                   <div className="switchBox">
                     <label className="form-control">
-                      <input type="checkbox" />
+                      <input type="checkbox" defaultChecked/>
                     </label>
                     <h4>Marketing</h4>
                   </div>
