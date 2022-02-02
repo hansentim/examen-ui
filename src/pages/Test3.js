@@ -3,6 +3,7 @@ import { useNavigate } from 'react-router-dom';
 import styled from 'styled-components';
 import { motion } from 'framer-motion';
 import AnimatedPage from '../components/AnimatedPage';
+import logo from '../img/chillalogo.png'
 
 const Test3 = () => {
   const navigate = useNavigate();
@@ -11,7 +12,7 @@ const Test3 = () => {
       <StyledForm>
         <div className="a-container">
         <ArrowButton
-          onClick={() => navigate('/test2')}
+          onClick={() => navigate('/test3')}
           whileHover={{ scale: 2, rotate: 360 }}
           className="fas fa-arrow-left fa-2x"
           style={{
@@ -21,57 +22,42 @@ const Test3 = () => {
           <div className="formBox">
             <div className="letterBox">A</div>
             <FormCard1>
-              <div className='formContainer'>
-                <h2>Hobbies</h2>
-                <div className="switchBox">
-                  <label className="form-control">
-                    <input type="checkbox" name="checkbox" />
-                  </label>
-                  <h5>Photography</h5>
+                <div className='formContainer'>
+                    <img src={logo} alt="" />
+                    <h5>Vi tar hand om dina uppgifter</h5>
+                    <p>Chilla vill ge dig en säker och god upplevelse. För detta använder vi kakor. Vissa av dessa kakor är nödvändiga för att vår hemsida ska fungera, så ät inte upp de! Andra kakor hjälper dig få en skräddarsydd upplevelse. Genom att trycka på "ACCEPTERA" godkänner du användningen av de kakor som är markerade. </p>
+                    <button>ACCEPTERA</button>
+                    <div className='switchGrid'>
+                      <div className="switchBox">
+                        <label className="switch">
+                          <input type="checkbox" checked/>
+                          <span className="slider"></span>
+                        </label>
+                        <h4>Nödvändiga</h4>
+                        </div>
+                        <div className="switchBox">
+                          <label className="switch">
+                            <input type="checkbox"/>
+                            <span className="slider"></span>
+                          </label>
+                          <h4>Funktionella</h4>
+                        </div>
+                        <div className="switchBox">
+                          <label className="switch">
+                            <input type="checkbox"/>
+                            <span className="slider"></span>
+                          </label>
+                          <h4>Statistiska</h4>
+                        </div>
+                        <div className="switchBox">
+                          <label className="switch">
+                            <input type="checkbox"/>
+                            <span className="slider"></span>
+                          </label>
+                          <h4>Marketing</h4>
+                      </div>
+                    </div>
                 </div>
-                <div className="switchBox">
-                  <label className="form-control">
-                    <input type="checkbox" name="checkbox" />
-                  </label>
-                  <h5>Football</h5>
-                </div>
-                <div className="switchBox">
-                  <label className="form-control">
-                    <input type="checkbox" name="checkbox" />
-                  </label>
-                  <h5>Cycling</h5>
-                </div>
-                <div className="switchBox">
-                  <label className="form-control">
-                    <input type="checkbox" name="checkbox" />
-                  </label>
-                  <h5>Jogging</h5>
-                </div>
-                <div className="switchBox">
-                  <label className="form-control">
-                    <input type="checkbox" name="checkbox" />
-                  </label>
-                  <h5>Gaming</h5>
-                </div>
-                <div className="switchBox">
-                  <label className="form-control">
-                    <input type="checkbox" name="checkbox" />
-                  </label>
-                  <h5>Writing</h5>
-                </div>
-                <div className="switchBox">
-                  <label className="form-control">
-                    <input type="checkbox" name="checkbox" />
-                  </label>
-                  <h5>Gardening</h5>
-                </div>
-                <div className="switchBox">
-                  <label className="form-control">
-                    <input type="checkbox" name="checkbox" />
-                  </label>
-                  <h5>Cooking</h5>
-                </div>
-              </div>
             </FormCard1>
           </div>
         </div>
@@ -80,69 +66,45 @@ const Test3 = () => {
             <div className="letterBox">B</div>
             <FormCard2>
             <div className='formContainer'>
-                <h2>Hobbies</h2>
+              <img src={logo} alt="" />
+              <h5>Vi tar hand om dina uppgifter</h5>
+              <p>Chilla vill ge dig en säker och god upplevelse. För detta använder vi kakor. Vissa av dessa kakor är nödvändiga för att vår hemsida ska fungera, så ät inte upp de! Andra kakor hjälper dig få en skräddarsydd upplevelse. Genom att trycka på "ACCEPTERA" godkänner du användningen av de kakor som är markerade. </p>
+              <div className='buttons'>
+                <button>ACCEPTERA</button>
+                <button className='smallButton'>Acceptera endast nödvändiga cookies</button>
+              </div>
+              <div className='switchGrid'>
                 <div className="switchBox">
-                  <label className="switch">
-                    <input type="checkbox"/>
-                    <span className="slider"></span>
+                  <label className="form-control">
+                    <input type="checkbox" checked/>
                   </label>
-                  <h5>Photography</h5>
-                </div>
-                <div className="switchBox">
-                  <label className="switch">
-                    <input type="checkbox"/>
-                    <span className="slider"></span>
-                  </label>
-                  <h5>Football</h5>
-                </div>
-                <div className="switchBox">
-                  <label className="switch">
-                    <input type="checkbox"/>
-                    <span className="slider"></span>
-                  </label>
-                  <h5>Cycling</h5>
-                </div>
-                <div className="switchBox">
-                  <label className="switch">
-                    <input type="checkbox"/>
-                    <span className="slider"></span>
-                  </label>
-                  <h5>Jogging</h5>
-                </div>
-                <div className="switchBox">
-                  <label className="switch">
-                    <input type="checkbox"/>
-                    <span className="slider"></span>
-                  </label>
-                  <h5>Gaming</h5>
-                </div>
-                <div className="switchBox">
-                  <label className="switch">
-                    <input type="checkbox"/>
-                    <span className="slider"></span>
-                  </label>
-                  <h5>Writing</h5>
-                </div>
-                <div className="switchBox">
-                  <label className="switch">
-                    <input type="checkbox"/>
-                    <span className="slider"></span>
-                  </label>
-                  <h5>Gardening</h5>
-                </div>
-                <div className="switchBox">
-                  <label className="switch">
-                    <input type="checkbox"/>
-                    <span className="slider"></span>
-                  </label>
-                  <h5>Cooking</h5>
+                  <h4>Nödvändiga</h4>
+                  </div>
+                  <div className="switchBox">
+                    <label className="form-control">
+                      <input type="checkbox" checked/>
+                    </label>
+                    <h4>Funktionella</h4>
+                  </div>
+                  <div className="switchBox">
+                    <label className="form-control">
+                      <input type="checkbox" checked/>
+                    </label>
+                    <h4>Statistiska</h4>
+                  </div>
+                  <div className="switchBox">
+                    <label className="form-control">
+                      <input type="checkbox" checked/>
+                    </label>
+                    <h4>Marketing</h4>
                 </div>
               </div>
+            </div>
             </FormCard2>
           </div>
           {/* rotera pilen */}
           <ArrowButton
-            onClick={() => navigate('/test4')}
+            onClick={() => navigate('/home')}
             whileHover={{ scale: 2, rotate: 360 }}
             className="fas fa-arrow-right fa-2x"
             style={{
@@ -171,7 +133,7 @@ const StyledForm = styled.div`
         display: flex;
         align-items: center;
         justify-content: center;
-        background: #F48668;
+        background: #54BD92;
         .formBox {
             backgroundcolor: #000;
         /* display: flex;
@@ -200,7 +162,7 @@ const StyledForm = styled.div`
     display: flex;
     align-items: center;
     justify-content: center;
-    background: #DD614A;
+    background: #2A9E6E;
     .formBox {
         backgroundcolor: #000;
         /* display: flex;
@@ -226,27 +188,196 @@ const StyledForm = styled.div`
 const FormCard1 = styled.div`
   background: #fdfdfd;
   width: 30vw;
-  height: 55vh;
+  height: 70vh;
   margin: 0 2rem;
   border-radius: 5px;
   box-shadow: 0px 6px 15px 2px rgba(0, 0, 0, 0.1);
-  .formContainer{
+  .formContainer {
     height: 100%;
-    padding: 1.5rem 3rem;
-    h2{
-      margin-bottom: 2rem;
-      font-size: 1.8rem
+    display:flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: column;
+    padding: 1rem 4rem;
+    img{
+        margin-top: 1rem;
+        height: 5rem;
     }
+    h4{
+      padding-top: .5rem;
+    }
+    h5{
+        padding-top: 1.5rem;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+    }
+    p{
+        padding-top: 1.5rem;
+        text-align: center;
+    }
+    button{
+        margin-top: 1rem;
+        padding: 1rem 2rem;
+        background: #036440;
+        color: #f4f4f4;
+        border: none;
+        border-radius: 5px;
+    }
+    
+  }
+  .switchGrid{
+    padding-top: 3rem;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 3rem 4rem;
   }
   .switchBox {
     display: flex;
     justify-content: left;
     align-items: center;
-    padding-bottom: 1.5rem;
-    h5{
-      font-size: 1.2rem;
-      margin-left: 1.5rem
+    flex-direction: column;
+  }
+  .switch {
+    font-size: 17px;
+    position: relative;
+    display: inline-block;
+    width: 2.6em;
+    height: 1.3em;
+  }
+  .switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+  }
+  .slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(70, 70, 70, 0.8);
+    transition: 0.4s;
+    border-radius: 30px;
+  }
+  .slider:before {
+    position: absolute;
+    content: '';
+    height: 0.8em;
+    width: 0.8em;
+    border-radius: 20px;
+    left: 0.2em;
+    bottom: 0.3em;
+    background-color: white;
+    transition: 0.4s;
+  }
+  input:checked + .slider {
+    background-color: rgba(70, 142, 70, 0.8);
+  }
+  input:focus + .slider {
+    box-shadow: 0 0 1px #fbb439;
+  }
+
+  input:checked + .slider:before {
+    transform: translateX(1.5em);
+  }
+  
+  @media (max-width: 1280px) {
+    .formContainer{
+      padding: 0 4rem;
+      img{
+        height: 4rem;
+      }
+      h5{
+          padding-top: 1.2rem;
+          text-transform: uppercase;
+          letter-spacing: 1px;
+          font-size: .8rem;
+      }
+      p{
+          padding-top: 1.2rem;
+          text-align: center;
+          font-size: .9rem;
+      }
+      button{
+        padding: .8rem 1.8rem;
+        background: #036440;
+        color: #f4f4f4;
+        border: none;
+        border-radius: 5px;
+        font-size: .9rem;
+      }
     }
+    .switchGrid{
+      padding-top: 2rem;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1rem 3rem;
+    }
+    
+    
+  }
+`;
+const FormCard2 = styled.div`
+  background: #fdfdfd;
+  width: 30vw;
+  height: 70vh;
+  margin: 0 2rem;
+  border-radius: 5px;
+  box-shadow: 0px 6px 15px 2px rgba(0, 0, 0, 0.1);
+
+  .formContainer {
+    height: 100%;
+    display:flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: column;
+    padding: 1rem 4rem;
+    img{
+        margin-top: 1rem;
+        height: 5rem;
+        }
+    h4{
+      padding-top: .5rem;
+    }
+    h5{
+        padding-top: 1.5rem;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+    }
+    p{
+        padding-top: 1.5rem;
+        text-align: center;
+    }
+    .buttons{
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+    button{
+        margin-top: 1rem;
+        padding: 1rem 2rem;
+        background: #036440;
+        color: #f4f4f4;
+        border: none;
+        border-radius: 5px;
+    }
+    .smallButton{
+      padding: .8rem 1.2rem;
+      background: #8d8e8f;
+    }
+  }
+  .switchGrid{
+    padding-top: 3rem;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 3rem 4rem;
+  }
+  .switchBox {
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    flex-direction: column;
   }
   input[type='checkbox'] {
     /* Add if not using autoprefixer */
@@ -277,75 +408,53 @@ const FormCard1 = styled.div`
   input[type='checkbox']:checked::before {
     transform: scale(1);
   }
-`;
-const FormCard2 = styled.div`
-  background: #fdfdfd;
-  width: 30vw;
-  height: 55vh;
-  margin: 0 2rem;
-  border-radius: 5px;
-  box-shadow: 0px 6px 15px 2px rgba(0, 0, 0, 0.1);
-  .formContainer{
-    height: 100%;
-    padding: 1.5rem 3rem;
-    h2{
-      margin-bottom: 2rem;
-      font-size: 1.8rem
+  @media (max-width: 1280px) {
+    .formContainer{
+      padding: 0 4rem;
+      img{
+        height: 4rem;
+      }
+      h5{
+          padding-top: 1.2rem;
+          text-transform: uppercase;
+          letter-spacing: 1px;
+          font-size: .8rem;
+      }
+      p{
+          padding-top: 1.2rem;
+          text-align: center;
+          font-size: .9rem;
+      }
+      .buttons{
+        display: flex;
+        flex-direction: row;
+        /* align-items: space-around;
+        justify-content: space-around; */
+      }
+      button{
+        padding: .8rem 1.8rem;
+        background: #036440;
+        color: #f4f4f4;
+        border: none;
+        border-radius: 5px;
+        font-size: .9rem;
+      }
+      .smallButton{
+        padding: .7rem .8rem;
+        margin-left: .5rem;
+        background: #8d8e8f;
+        font-size: .8rem;
+      }
     }
-  }
-  .switchBox {
-    display: flex;
-    justify-content: left;
-    align-items: center;
-    padding-bottom: 1.5rem;
-    h5{
-      font-size: 1.2rem;
-      margin-left: 1.5rem
+    
+    .switchGrid{
+      padding-top: 1rem;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: .8rem 3rem;
     }
-  }
-  .switch {
-    font-size: 17px;
-    position: relative;
-    display: inline-block;
-    width: 2.6em;
-    height: 1.3em;
-  }
-  .switch input {
-    opacity: 0;
-    width: 0;
-    height: 0;
-  }
-  .slider {
-    position: absolute;
-    cursor: pointer;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background-color: #F66666;
-    transition: 0.4s;
-    border-radius: 30px;
-  }
-  .slider:before {
-    position: absolute;
-    content: '';
-    height: 0.8em;
-    width: 0.8em;
-    border-radius: 20px;
-    left: 0.2em;
-    bottom: 0.3em;
-    background-color: white;
-    transition: 0.4s;
-  }
-  input:checked + .slider {
-    background-color: #fbb439;
-  }
-  input:focus + .slider {
-    box-shadow: 0 0 1px #fbb439;
-  }
-
-  input:checked + .slider:before {
-    transform: translateX(1.5em);
+    
+    
   }
 `;
 

@@ -4,7 +4,6 @@ import Home from './pages/Home';
 import Test1 from './pages/Test1';
 import Test2 from './pages/Test2';
 import Test3 from './pages/Test3';
-import Test4 from './pages/Test4';
 import EndPage from './pages/Endpage';
 import AnimationTest from './pages/AnimationTest';
 import AnimationTest2 from './pages/AnimationTest2';
@@ -24,7 +23,6 @@ function App() {
           <Route path="/test1" element={<Test1 />} />
           <Route path="/test2" element={<Test2 />} />
           <Route path="/test3" element={<Test3 />} />
-          <Route path="/test4" element={<Test4 />} />
           <Route path="/thanks" element={<EndPage />} />
           <Route path="/animationtest" element={<AnimationTest />} />
           <Route path="/animationtest2" element={<AnimationTest2 />} />
