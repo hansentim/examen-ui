@@ -1,3 +1,6 @@
+//Components
+import AnimatedPage from '../components/AnimatedPage';
+//Style & Animation
 import { motion } from 'framer-motion';
 import styled from 'styled-components';
 import heart from '../img/heart-solid.svg';
@@ -6,10 +9,8 @@ import {
   heartAnimation,
   endFade,
   pageAnimation,
-  fadeSlow,
   titleAnimB,
 } from '../animations';
-import AnimatedPage from '../components/AnimatedPage';
 
 export const AnimateHeart = () => (
   <AnimatedPage>
@@ -37,7 +38,7 @@ export const AnimateHeart = () => (
   </AnimatedPage>
 );
 
-//Style
+//Styles
 const HeartContainer = styled.div`
   display: grid;
   align-items: center;

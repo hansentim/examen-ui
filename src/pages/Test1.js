@@ -1,129 +1,177 @@
 import { useNavigate } from 'react-router-dom';
+import React, { useState } from 'react';
 //Styles & Animation
 import styled from 'styled-components';
 import { motion } from 'framer-motion';
+//components
 import AnimatedPage from '../components/AnimatedPage';
+//Material UI
+import Box from '@mui/material/Box';
+import Typography from '@mui/material/Typography';
+import Modal from '@mui/material/Modal';
 
 const Test1 = () => {
+  //state för modalen
+  const [open, setOpen] = useState(false);
+  //öppna modal
+  const handleOpen = (e) => {
+    e.preventDefault();
+    setOpen(true);
+  };
+  //Stänga modal
+  const handleClose = () => setOpen(false);
   const navigate = useNavigate();
   return (
-    <AnimatedPage>
-      <StyledFormContainer>
-        <div className="containerA">
-          <div className="formBox1">
-            <div className="letterBox">A</div>
-            <FormCardA>
-              <StyledFormA>
-                <div className="formContainerA">
-                  <h1>Get Started</h1>
-                  <p className="signIn">
-                    Already have an account? <span>Sign in</span>
-                  </p>
-                  <div className="label">
-                    <label>MY NAME IS</label>
-                    <input id="text" type="text" />
-                  </div>
-                  <div className="label">
-                    <label>MAIL ME AT</label>
-                    <input id="text" type="email" />
-                  </div>
-                  <div className="label">
-                    <label>CALL ME ON</label>
-                    <input id="text" type="text" />
-                  </div>
-                  <div className="switchBox">
-                    {' '}
-                    <label className="switch">
-                      <input type="checkbox" />
-                      <span className="slider"></span>
-                    </label>
-                    <p>Yes, I want to receive my newsletter emails!</p>
-                  </div>
-
-                  <div className="switchBox">
-                    <label className="switch">
-                      <input type="checkbox" />
-                      <span className="slider"></span>
-                    </label>
-                    <p>
-                      I agree to all the <span>Terms</span> and{' '}
-                      <span>Privacy Policys</span>
+    <>
+      <Modal
+        open={open}
+        onClose={handleClose}
+        aria-labelledby="modal-modal-title"
+        aria-describedby="modal-modal-description"
+      >
+        <Box sx={style}>
+          <Typography id="modal-modal-title" variant="h6" component="h2">
+            Hello there Buddy!
+          </Typography>
+          <Typography id="modal-modal-description" sx={{ mt: 2 }}>
+            Thanks for looking at our test, this buttons only function is to
+            give you this message!
+          </Typography>
+        </Box>
+      </Modal>
+      <AnimatedPage>
+        <StyledFormContainer>
+          <div className="containerA">
+            <div className="formBox1">
+              <div className="letterBox">A</div>
+              <FormCardA>
+                <StyledFormA>
+                  <div className="formContainerA">
+                    <h1>Get Started</h1>
+                    <p className="signIn">
+                      Already have an account? <span>Sign in</span>
                     </p>
-                  </div>
+                    <div className="label">
+                      <label>MY NAME IS</label>
+                      <input id="text" type="text" />
+                    </div>
+                    <div className="label">
+                      <label>MAIL ME AT</label>
+                      <input id="text" type="email" />
+                    </div>
+                    <div className="label">
+                      <label>CALL ME ON</label>
+                      <input id="text" type="text" />
+                    </div>
+                    <div className="switchBox">
+                      {' '}
+                      <label className="switch">
+                        <input type="checkbox" />
+                        <span className="slider"></span>
+                      </label>
+                      <p>Yes, I want to receive my newsletter emails!</p>
+                    </div>
+                    <div className="switchBox">
+                      <label className="switch">
+                        <input type="checkbox" />
+                        <span className="slider"></span>
+                      </label>
+                      <p>
+                        I agree to all the <span>Terms</span> and{' '}
+                        <span>Privacy Policys</span>
+                      </p>
+                    </div>
 
-                  <div className="ctBox">
-                    <button className="buttonA">SIGN UP</button>
+                    <div className="ctBox">
+                      <button className="buttonA" onClick={handleOpen}>
+                        SIGN UP
+                      </button>
+                    </div>
                   </div>
-                </div>
-              </StyledFormA>
-            </FormCardA>
+                </StyledFormA>
+              </FormCardA>
+            </div>
           </div>
-        </div>
-        <div className="containerB">
-          <div className="formBox2">
-            <div className="letterBox">B</div>
-            <FormCardB>
-              <StyledFormB>
-                <div className="formContainerB">
-                  <h1>Get Started</h1>
-                  <p className="signIn">
-                    Already have an account? <span>Sign in</span>
-                  </p>
-
-                  <div className="label">
-                    <label>Name</label>
-                    <input id="text" type="text" />
-                  </div>
-                  <div className="label">
-                    <label>Email</label>
-                    <input id="text" type="email" />
-                  </div>
-                  <div className="label">
-                    <label>Phone</label>
-                    <input id="text" type="text" />
-                  </div>
-                  <div className="switchBox">
-                    {' '}
-                    <label className="form-control">
-                      <input type="checkbox" name="checkbox" />
-                    </label>
-                    <p>Yes, I want to receive newsletter emails!</p>
-                  </div>
-
-                  <div className="switchBox">
-                    <label className="form-control">
-                      <input type="checkbox" name="checkbox" defaultChecked />
-                    </label>
-                    <p>
-                      I agree to all the <span>Terms</span> and{' '}
-                      <span>Privacy Policys</span>
+          <div className="containerB">
+            <div className="formBox2">
+              <div className="letterBox">B</div>
+              <FormCardB>
+                <StyledFormB>
+                  <div className="formContainerB">
+                    <h1>Get Started</h1>
+                    <p className="signIn">
+                      Already have an account? <span>Sign in</span>
                     </p>
-                  </div>
 
-                  <div className="ctBox">
-                    <button className="buttonA">SIGN UP</button>
+                    <div className="label">
+                      <label>Name</label>
+                      <input id="text" type="text" />
+                    </div>
+                    <div className="label">
+                      <label>Email</label>
+                      <input id="text" type="email" />
+                    </div>
+                    <div className="label">
+                      <label>Phone</label>
+                      <input id="text" type="text" />
+                    </div>
+                    <div className="switchBox">
+                      {' '}
+                      <label className="form-control">
+                        <input type="checkbox" name="checkbox" />
+                      </label>
+                      <p>Yes, I want to receive newsletter emails!</p>
+                    </div>
+
+                    <div className="switchBox">
+                      <label className="form-control">
+                        <input type="checkbox" name="checkbox" />
+                      </label>
+                      <p>
+                        I agree to all the <span>Terms</span> and{' '}
+                        <span>Privacy Policys</span>
+                      </p>
+                    </div>
+
+                    <div className="ctBox">
+                      <button className="buttonA" onClick={handleOpen}>
+                        SIGN UP
+                      </button>
+                    </div>
                   </div>
-                </div>
-              </StyledFormB>
-            </FormCardB>
+                </StyledFormB>
+              </FormCardB>
+            </div>
+            {/* rotera pilen vid hoover */}
+            <ArrowButton
+              onClick={() => navigate('/test2')}
+              whileHover={{ scale: 2, rotate: 360 }}
+              className="fas fa-arrow-right fa-2x"
+              style={{
+                color: '#ffbb98',
+              }}
+            ></ArrowButton>
           </div>
-          {/* rotera pilen */}
-          <ArrowButton
-            onClick={() => navigate('/test2')}
-            whileHover={{ scale: 2, rotate: 360 }}
-            className="fas fa-arrow-right fa-2x"
-            style={{
-              color: '#ffbb98',
-            }}
-          ></ArrowButton>
-        </div>
-      </StyledFormContainer>
-    </AnimatedPage>
+        </StyledFormContainer>
+      </AnimatedPage>
+    </>
   );
 };
 
-//Style
+//Style för modalen
+const style = {
+  position: 'absolute',
+  top: '50%',
+  left: '50%',
+  transform: 'translate(-50%, -50%)',
+  width: 350,
+  bgcolor: '#fdfdfd',
+  borderRadius: 5,
+  boxShadow: 24,
+  p: 10,
+};
 
+//Style
 const StyledFormContainer = styled.div`
   display: flex;
   width: 100%;
@@ -179,6 +227,7 @@ const StyledFormContainer = styled.div`
   }
 `;
 
+//Form A
 const FormCardA = styled.div`
   background: #ff8ca4;
   padding: 0 3rem;
@@ -189,6 +238,9 @@ const FormCardA = styled.div`
   margin: 0 2rem;
   border-radius: 10px;
   box-shadow: 0px 6px 15px 2px rgba(0, 0, 0, 0.1);
+  @media (min-width: 2500px) {
+    height: 60vh;
+  }
   .formContainerA {
     display: flex;
     flex-direction: column;
@@ -217,19 +269,25 @@ const StyledFormA = styled.form`
     @media (min-width: 1920px) {
       padding-top: 4rem;
     }
+    @media (min-width: 2500px) {
+      padding-top: 6rem;
+      font-size: 3rem;
+    }
   }
   .signIn {
     padding-bottom: 3rem;
     text-align: left;
     font-size: 0.7rem;
+    @media (min-width: 2500px) {
+      font-size: 1rem;
+    }
   }
   #text {
     background: none;
     border: none;
     border-bottom: 1.5px solid #fdfdfd;
     outline: none;
-    /* padding-right: 1rem; */
-    width: 75%;
+    width: 70%;
     color: #fdfdfd;
   }
   .ctBox {
@@ -252,6 +310,9 @@ const StyledFormA = styled.form`
     }
     @media (min-width: 1920px) {
       padding-bottom: 3rem;
+    }
+    @media (min-width: 2500px) {
+      font-size: 0.9rem;
     }
   }
   label {
@@ -291,20 +352,21 @@ const StyledFormA = styled.form`
     background-color: white;
     transition: 0.4s;
   }
-
   input:checked + .slider {
     background-color: #fbb439;
   }
   input:focus + .slider {
     box-shadow: 0 0 1px #fbb439;
   }
-
   input:checked + .slider:before {
     transform: translateX(1.5em);
   }
   p {
     font-size: 0.7rem;
     padding-left: 0.5rem;
+    @media (min-width: 2500px) {
+      font-size: 0.9rem;
+    }
   }
   span {
     color: #2e65a9;
@@ -329,6 +391,10 @@ const StyledFormA = styled.form`
     @media (min-width: 1920px) {
       margin-top: 2rem;
     }
+    @media (min-width: 2500px) {
+      margin-top: 3rem;
+      padding: 1em 4em;
+    }
   }
   .buttonA:hover {
     background-color: #fc9919;
@@ -341,6 +407,7 @@ const StyledFormA = styled.form`
   }
 `;
 
+//Form B
 const FormCardB = styled.div`
   background: none;
   border: 4px solid #4a5759;
@@ -350,6 +417,9 @@ const FormCardB = styled.div`
   border-radius: 10px;
   @media (max-width: 1280px) {
     width: 30vw;
+  }
+  @media (min-width: 2500px) {
+    height: 60vh;
   }
 `;
 
@@ -374,6 +444,10 @@ const StyledFormB = styled.form`
     @media (min-width: 1920px) {
       padding-top: 4rem;
     }
+    @media (min-width: 2500px) {
+      padding-top: 6rem;
+      font-size: 3rem;
+    }
   }
   .signIn {
     padding-bottom: 3rem;
@@ -381,6 +455,9 @@ const StyledFormB = styled.form`
     font-size: 0.7rem;
     @media (max-width: 1280px) {
       padding-bottom: 2rem;
+    }
+    @media (min-width: 2500px) {
+      font-size: 1rem;
     }
   }
   #text {
@@ -405,18 +482,11 @@ const StyledFormB = styled.form`
 
   .form-control {
     font-size: 0.7rem;
-    /*  display: flex; */
     color: #4a5759;
-    /* display: grid; */
-    /* grid-template-columns: 1em auto; */
-    /* gap: 0.7em; */
   }
   input[type='checkbox'] {
-    /* Add if not using autoprefixer */
+    /* Addera om autoprefixer inte används */
     -webkit-appearance: none;
-
-    /* font: inherit; */
-
     color: currentColor;
     width: 1.15em;
     height: 1.15em;
@@ -425,6 +495,11 @@ const StyledFormB = styled.form`
     transform: translateY(-0.075em);
     display: grid;
     place-content: center;
+    @media (min-width: 2500px) {
+      width: 1.25em;
+      height: 1.25em;
+      border: 0.15em solid currentColor;
+    }
   }
   input[type='checkbox']::before {
     content: '';
@@ -452,6 +527,9 @@ const StyledFormB = styled.form`
     @media (max-width: 1280px) {
       padding-bottom: 0.7rem;
     }
+    @media (min-width: 2500px) {
+      font-size: 0.9rem;
+    }
     label {
       padding-right: 0.3rem;
       padding-bottom: 1rem;
@@ -460,21 +538,20 @@ const StyledFormB = styled.form`
         padding-bottom: 0.7rem;
       }
     }
-
-    /* margin-right: 0.2rem; */
-    /*  justify-content: center;
-    align-items: center; */
   }
-
   p {
     font-size: 0.7rem;
     padding-left: 0.5rem;
+    @media (min-width: 2500px) {
+      font-size: 0.9rem;
+    }
   }
   span {
     color: #96a797;
     font-weight: 700;
     cursor: pointer;
   }
+
   .buttonA {
     margin-top: 2rem;
     padding: 0.9em 3.5em;
@@ -494,6 +571,10 @@ const StyledFormB = styled.form`
     @media (min-width: 1920px) {
       margin-top: 1.5rem;
     }
+    @media (min-width: 2500px) {
+      margin-top: 4rem;
+      padding: 1.2em 4em;
+    }
   }
   .buttonA:hover {
     background-color: #eca17c;
@@ -506,6 +587,7 @@ const StyledFormB = styled.form`
   }
 `;
 
+//Slide Button
 const ArrowButton = styled(motion.button)`
   padding: 0.5rem 1.2rem;
   border: none;
