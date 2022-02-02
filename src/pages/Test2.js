@@ -450,6 +450,7 @@ grid-row: 1;
 @media (min-width: 1920px) {
   label{
     font-size: 1rem;
+    margin: .7rem 0 0 .9rem;
   }
   .sectionTitle{
     font-size: 1.2rem
@@ -459,11 +460,6 @@ grid-row: 1;
   }
 }
 }
-@media (min-width: 1920px) {
-  label{
-    font-size: 1rem;
-    margin: .7rem 0 0 .9rem;
-  }
 }
 `;
 
