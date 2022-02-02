@@ -23,9 +23,9 @@ function App() {
           <Route path="/test1" element={<Test1 />} />
           <Route path="/test2" element={<Test2 />} />
           <Route path="/test3" element={<Test3 />} />
-          <Route path="/thanks" element={<EndPage />} />
           <Route path="/animationtest" element={<AnimationTest />} />
           <Route path="/animationtest2" element={<AnimationTest2 />} />
+          <Route path="/thanks" element={<EndPage />} />
         </Routes>
       </AnimatePresence>
     </div>

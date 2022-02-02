@@ -91,6 +91,6 @@ export const endFade = {
   hidden: { opacity: 0 },
   show: {
     opacity: 1,
-    transition: { ease: 'easeIn', duration: 2 },
+    transition: { ease: 'easeIn', duration: 4 },
   },
 };

@@ -27,7 +27,11 @@ export const AnimateHeart = () => (
             <img src={heart} alt="heart" />
           </Heart>
         </motion.div>
-        <motion.p variants={endFade}>'Cause I'm an Island Boy</motion.p>
+        <div className="legend">
+          <motion.p variants={endFade}>
+            You're a legend! Thank you for saving our grades in school!
+          </motion.p>
+        </div>
       </motion.div>
     </HeartContainer>
   </AnimatedPage>
@@ -45,6 +49,13 @@ const HeartContainer = styled.div`
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
+  position: absolute;
+  .legend {
+    position: relative;
+    z-index: 2;
+    font-size: 1.2rem;
+    font-weight: 400;
+  }
   h1 {
     padding-bottom: 1rem;
     color: #3d3d3d;
