@@ -1,18 +1,25 @@
 import { useNavigate } from 'react-router-dom';
-import Toggle from '../components/Toggle';
-//Style and animation
-import styled from 'styled-components';
-import { AnimateSharedLayout } from 'framer-motion';
-import { motion } from 'framer-motion';
+//Components
 import AnimatedPage from '../components/AnimatedPage';
-import { fadeSlow, fade, fadeFaster, fadeSuperFast } from '../animations';
+import Toggle from '../components/Toggle';
+//Style & animation
+import styled from 'styled-components';
+import { LayoutGroup } from 'framer-motion';
+import { motion } from 'framer-motion';
+//Import av animationer
+import {
+  fadeSlow,
+  fade,
+  fadeFaster,
+  fadeSuperFast,
+  titleAnimC,
+} from '../animations';
 
 const AnimateTest = () => {
   const navigate = useNavigate();
-  //const [element, controls] = useScroll();
   return (
     <AnimatedPage>
-      <AnimContainer>
+      <>
         <ArrowBoxLeft>
           <ArrowButton
             onClick={() => navigate('/test3')}
@@ -23,16 +30,18 @@ const AnimateTest = () => {
             }}
           ></ArrowButton>
         </ArrowBoxLeft>
-        <StyledAnim
-        /*    variants={scrollReveal}
-      animate={controls}
-      ref={element}
-      initial="hidden" */
-        >
-          <h1>
-            Let's test <span>ANIMATION</span> speed!
-          </h1>
-          <AnimateSharedLayout type="crossfade">
+        <StyledAnim>
+          <motion.div
+            variants={titleAnimC}
+            initial="hidden"
+            animate="show"
+            exit="exit"
+          >
+            <motion.h1 variants={fade}>
+              Let's test <span>ANIMATION</span> speed!
+            </motion.h1>
+          </motion.div>
+          <LayoutGroup type="crossfade">
             <Toggle title="1. Superslow fade!">
               <motion.div
                 initial="hidden"
@@ -114,7 +123,7 @@ const AnimateTest = () => {
                 </p>
               </motion.div>
             </Toggle>
-          </AnimateSharedLayout>
+          </LayoutGroup>
         </StyledAnim>
         <ArrowBoxRight>
           <ArrowButton
@@ -126,19 +135,10 @@ const AnimateTest = () => {
             }}
           ></ArrowButton>
         </ArrowBoxRight>
-      </AnimContainer>
+      </>
     </AnimatedPage>
   );
 };
-
-const AnimContainer = styled.div`
-  /*   display: flex;
-  align-items: center; */
-  /*   background-color: tomato;
-  height: 100vh;
-  display: flex;
-  align-items: center; */
-`;
 
 const StyledAnim = styled.div`
   min-height: 100vh;
@@ -157,8 +157,6 @@ const StyledAnim = styled.div`
   @media (min-width: 2500px) {
     padding: 20rem 15rem 1rem 15rem;
   }
-
-  display: block;
   span {
     color: #687a6e;
     font-weight: 700;
@@ -203,6 +201,7 @@ const StyledAnim = styled.div`
   }
 `;
 
+//Slide Buttons
 const ArrowBoxLeft = styled.div`
   position: fixed;
   bottom: 50%;

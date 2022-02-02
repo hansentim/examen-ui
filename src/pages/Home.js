@@ -23,8 +23,7 @@ const Home = () => {
   );
 };
 
-//Style
-
+//Styles
 const StyledContainer = styled.div`
   display: grid;
   align-items: center;
@@ -42,7 +41,7 @@ const Hero = styled.div`
   height: 50vh;
   text-align: center;
   padding: 3rem;
-
+  //Animera titel med gradients
   h1 {
     background: radial-gradient(
       circle,
@@ -65,9 +64,6 @@ const Hero = styled.div`
       100% {
         background-position: 100%;
       }
-    }
-    span {
-      color: #22a6b3;
     }
     @media (min-width: 2500px) {
       font-size: 3.5rem;
@@ -109,14 +105,12 @@ const Hero = styled.div`
       font-size: 1.2rem;
     }
   }
-
   button:hover {
     background-color: #8e0ea9;
     box-shadow: 0px 15px 20px rgba(142, 14, 169, 0.4);
     color: #fdfdfd;
     transform: translateY(-7px);
   }
-
   button:active {
     transform: translateY(-1px);
   }
