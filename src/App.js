@@ -1,4 +1,5 @@
 import { Route, Routes, useLocation } from 'react-router-dom';
+import React, { useState } from 'react';
 //Components
 import Home from './pages/Home';
 import Test1 from './pages/Test1';
@@ -13,7 +14,11 @@ import { AnimatePresence } from 'framer-motion';
 
 //Använd location.pathname för att ge Routes en unik key.
 function App() {
+  //state för modalen
+  const [open, setOpen] = useState(false);
+
   const location = useLocation();
+
   return (
     <div className="App">
       <GlobalStyles />
@@ -21,8 +26,8 @@ function App() {
         <Routes key={location.pathname} location={location}>
           <Route path="/" element={<Home />} />
           <Route path="/test1" element={<Test1 />} />
-          <Route path="/test2" element={<Test2 />} />
-          <Route path="/test3" element={<Test3 />} />
+          <Route path="/test2" element={<Test2 open={open} setOpen={setOpen}/>} />
+          <Route path="/test3" element={<Test3 open={open} setOpen={setOpen}/>} />
           <Route path="/animationtest" element={<AnimationTest />} />
           <Route path="/animationtest2" element={<AnimationTest2 />} />
           <Route path="/thanks" element={<EndPage />} />
