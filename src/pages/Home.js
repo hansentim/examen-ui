@@ -31,14 +31,18 @@ const StyledContainer = styled.div`
   justify-content: center;
   width: 90vw;
   height: 90vh;
-  /*  border: 3px solid steelblue; */
+  color: #525252;
   margin: auto;
+  @media (min-width: 2500px) {
+    padding-top: 5rem;
+  }
 `;
 const Hero = styled.div`
   width: 50vw;
   height: 50vh;
   text-align: center;
   padding: 3rem;
+
   h1 {
     background: radial-gradient(
       circle,
@@ -65,17 +69,26 @@ const Hero = styled.div`
     span {
       color: #22a6b3;
     }
+    @media (min-width: 2500px) {
+      font-size: 3.5rem;
+    }
   }
   h3 {
     font-size: 1.4rem;
     font-weight: 600;
     padding-bottom: 1rem;
+    @media (min-width: 2500px) {
+      font-size: 2rem;
+    }
   }
   p {
     font-size: 1.2rem;
     font-weight: 500;
     padding: 1rem 3rem 5rem 3rem;
     line-height: 1.3;
+    @media (min-width: 2500px) {
+      font-size: 1.5rem;
+    }
   }
   button {
     padding: 1.1em 2.8em;
@@ -91,6 +104,10 @@ const Hero = styled.div`
     transition: all 0.3s ease 0s;
     cursor: pointer;
     outline: none;
+    @media (min-width: 2500px) {
+      padding: 1.3em 3em;
+      font-size: 1.2rem;
+    }
   }
 
   button:hover {

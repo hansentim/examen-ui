@@ -11,7 +11,7 @@ export const heartAnimation = {
 };
 
 export const pageAnimation = {
-  hidden: { x: -800, opacity: 0 },
+  hidden: { x: -1200, opacity: 0 },
   show: {
     x: 0,
     opacity: 1,
@@ -25,7 +25,7 @@ export const pageAnimation = {
 };
 
 export const titleAnim = {
-  hidden: { x: -800 },
+  hidden: { x: -1200 },
   show: {
     x: 0,
     transition: {
@@ -36,7 +36,7 @@ export const titleAnim = {
   },
 };
 export const pageAnimationB = {
-  hidden: { x: 800, opacity: 0 },
+  hidden: { x: 1200, opacity: 0 },
   show: {
     x: 0,
     opacity: 1,
@@ -45,7 +45,7 @@ export const pageAnimationB = {
 };
 
 export const titleAnimB = {
-  hidden: { x: 800 },
+  hidden: { x: 1200 },
   show: {
     x: 0,
     transition: {

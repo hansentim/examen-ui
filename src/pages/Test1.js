@@ -86,16 +86,13 @@ const Test1 = () => {
                     {' '}
                     <label className="form-control">
                       <input type="checkbox" name="checkbox" />
-                      {/* Yes, I want to receive my newsletter emails! */}
                     </label>
                     <p>Yes, I want to receive newsletter emails!</p>
                   </div>
 
                   <div className="switchBox">
                     <label className="form-control">
-                      <input type="checkbox" name="checkbox" />
-                      {/* I agree to all the{' '}
-                    <span>Terms</span> and <span>Privacy Policys</span> */}
+                      <input type="checkbox" name="checkbox" defaultChecked />
                     </label>
                     <p>
                       I agree to all the <span>Terms</span> and{' '}

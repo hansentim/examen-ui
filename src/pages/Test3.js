@@ -3,7 +3,7 @@ import { useNavigate } from 'react-router-dom';
 import styled from 'styled-components';
 import { motion } from 'framer-motion';
 import AnimatedPage from '../components/AnimatedPage';
-import logo from '../img/chillalogo.png'
+import logo from '../img/chillalogo.png';
 
 const Test3 = () => {
   const navigate = useNavigate();
@@ -11,53 +11,60 @@ const Test3 = () => {
     <AnimatedPage>
       <StyledForm>
         <div className="a-container">
-        <ArrowButton
-          onClick={() => navigate('/test3')}
-          whileHover={{ scale: 2, rotate: 360 }}
-          className="fas fa-arrow-left fa-2x"
-          style={{
-            color: '#3d3d3d',
-          }}
-        ></ArrowButton>
+          <ArrowButton
+            onClick={() => navigate('/test2')}
+            whileHover={{ scale: 2, rotate: 360 }}
+            className="fas fa-arrow-left fa-2x"
+            style={{
+              color: '#3d3d3d',
+            }}
+          ></ArrowButton>
           <div className="formBox">
             <div className="letterBox">A</div>
             <FormCard1>
-                <div className='formContainer'>
-                    <img src={logo} alt="" />
-                    <h5>Vi tar hand om dina uppgifter</h5>
-                    <p>Chilla vill ge dig en säker och god upplevelse. För detta använder vi kakor. Vissa av dessa kakor är nödvändiga för att vår hemsida ska fungera, så ät inte upp de! Andra kakor hjälper dig få en skräddarsydd upplevelse. Genom att trycka på "ACCEPTERA" godkänner du användningen av de kakor som är markerade. </p>
-                    <button>ACCEPTERA</button>
-                    <div className='switchGrid'>
-                      <div className="switchBox">
-                        <label className="switch">
-                          <input type="checkbox" checked/>
-                          <span className="slider"></span>
-                        </label>
-                        <h4>Nödvändiga</h4>
-                        </div>
-                        <div className="switchBox">
-                          <label className="switch">
-                            <input type="checkbox"/>
-                            <span className="slider"></span>
-                          </label>
-                          <h4>Funktionella</h4>
-                        </div>
-                        <div className="switchBox">
-                          <label className="switch">
-                            <input type="checkbox"/>
-                            <span className="slider"></span>
-                          </label>
-                          <h4>Statistiska</h4>
-                        </div>
-                        <div className="switchBox">
-                          <label className="switch">
-                            <input type="checkbox"/>
-                            <span className="slider"></span>
-                          </label>
-                          <h4>Marketing</h4>
-                      </div>
-                    </div>
+              <div className="formContainer">
+                <img src={logo} alt="" />
+                <h5>Vi tar hand om dina uppgifter</h5>
+                <p>
+                  Chilla vill ge dig en säker och god upplevelse. För detta
+                  använder vi kakor. Vissa av dessa kakor är nödvändiga för att
+                  vår hemsida ska fungera, så ät inte upp de! Andra kakor
+                  hjälper dig få en skräddarsydd upplevelse. Genom att trycka på
+                  "ACCEPTERA" godkänner du användningen av de kakor som är
+                  markerade.{' '}
+                </p>
+                <button>ACCEPTERA</button>
+                <div className="switchGrid">
+                  <div className="switchBox">
+                    <label className="switch">
+                      <input type="checkbox" defaultChecked />
+                      <span className="slider"></span>
+                    </label>
+                    <h4>Nödvändiga</h4>
+                  </div>
+                  <div className="switchBox">
+                    <label className="switch">
+                      <input type="checkbox" />
+                      <span className="slider"></span>
+                    </label>
+                    <h4>Funktionella</h4>
+                  </div>
+                  <div className="switchBox">
+                    <label className="switch">
+                      <input type="checkbox" />
+                      <span className="slider"></span>
+                    </label>
+                    <h4>Statistiska</h4>
+                  </div>
+                  <div className="switchBox">
+                    <label className="switch">
+                      <input type="checkbox" />
+                      <span className="slider"></span>
+                    </label>
+                    <h4>Marketing</h4>
+                  </div>
                 </div>
+              </div>
             </FormCard1>
           </div>
         </div>
@@ -65,46 +72,55 @@ const Test3 = () => {
           <div className="formBox">
             <div className="letterBox">B</div>
             <FormCard2>
-            <div className='formContainer'>
-              <img src={logo} alt="" />
-              <h5>Vi tar hand om dina uppgifter</h5>
-              <p>Chilla vill ge dig en säker och god upplevelse. För detta använder vi kakor. Vissa av dessa kakor är nödvändiga för att vår hemsida ska fungera, så ät inte upp de! Andra kakor hjälper dig få en skräddarsydd upplevelse. Genom att trycka på "ACCEPTERA" godkänner du användningen av de kakor som är markerade. </p>
-              <div className='buttons'>
-                <button>ACCEPTERA</button>
-                <button className='smallButton'>Acceptera endast nödvändiga cookies</button>
-              </div>
-              <div className='switchGrid'>
-                <div className="switchBox">
-                  <label className="form-control">
-                    <input type="checkbox" checked/>
-                  </label>
-                  <h4>Nödvändiga</h4>
+              <div className="formContainer">
+                <img src={logo} alt="" />
+                <h5>Vi tar hand om dina uppgifter</h5>
+                <p>
+                  Chilla vill ge dig en säker och god upplevelse. För detta
+                  använder vi kakor. Vissa av dessa kakor är nödvändiga för att
+                  vår hemsida ska fungera, så ät inte upp de! Andra kakor
+                  hjälper dig få en skräddarsydd upplevelse. Genom att trycka på
+                  "ACCEPTERA" godkänner du användningen av de kakor som är
+                  markerade.{' '}
+                </p>
+                <div className="buttons">
+                  <button>ACCEPTERA</button>
+                  <button className="smallButton">
+                    Acceptera endast nödvändiga cookies
+                  </button>
+                </div>
+                <div className="switchGrid">
+                  <div className="switchBox">
+                    <label className="form-control">
+                      <input type="checkbox" defaultChecked />
+                    </label>
+                    <h4>Nödvändiga</h4>
                   </div>
                   <div className="switchBox">
                     <label className="form-control">
-                      <input type="checkbox" checked/>
+                      <input type="checkbox" />
                     </label>
                     <h4>Funktionella</h4>
                   </div>
                   <div className="switchBox">
                     <label className="form-control">
-                      <input type="checkbox" checked/>
+                      <input type="checkbox" />
                     </label>
                     <h4>Statistiska</h4>
                   </div>
                   <div className="switchBox">
                     <label className="form-control">
-                      <input type="checkbox" checked/>
+                      <input type="checkbox" />
                     </label>
                     <h4>Marketing</h4>
+                  </div>
                 </div>
               </div>
-            </div>
             </FormCard2>
           </div>
           {/* rotera pilen */}
           <ArrowButton
-            onClick={() => navigate('/home')}
+            onClick={() => navigate('/animationtest')}
             whileHover={{ scale: 2, rotate: 360 }}
             className="fas fa-arrow-right fa-2x"
             style={{
@@ -120,69 +136,67 @@ const Test3 = () => {
 //Syle
 
 const StyledForm = styled.div`
-    display: flex;
-    width: 100%;
-    height: 100vh;
-    color: #3d3d3d;
-    background: #F48668;
+  display: flex;
+  width: 100%;
+  height: 100vh;
+  color: #3d3d3d;
+  background: #f48668;
 
-
-    .a-container {
-        height: 100%;
-        width: 50%;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        background: #54BD92;
-        .formBox {
-            backgroundcolor: #000;
-        /* display: flex;
-        flex-direction: column; */
-        }
-        .letterBox {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        margin: 0 0 1.5rem 2rem;
-        background: #fdfdfd;
-        height: 2.5rem;
-        width: 2.5rem;
-        border-radius: 5px;
-        text-align: center;
-        box-shadow: 0px 2px 4px 2px rgba(0, 0, 0, 0.1);
-        font-size: 2rem;
-        font-weight: 700;
-        }
-    }
-
-
-    .b-container {
-        height: 100%;
-        width: 50%;
+  .a-container {
+    height: 100%;
+    width: 50%;
     display: flex;
     align-items: center;
     justify-content: center;
-    background: #2A9E6E;
+    background: #54bd92;
     .formBox {
-        backgroundcolor: #000;
-        /* display: flex;
+      /* backgroundcolor: #000; */
+      /* display: flex;
         flex-direction: column; */
     }
     .letterBox {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        margin: 0 0 1.5rem 2rem;
-        background: #fdfdfd;
-        height: 2.5rem;
-        width: 2.5rem;
-        border-radius: 5px;
-        text-align: center;
-        box-shadow: 0px 2px 4px 2px rgba(0, 0, 0, 0.1);
-        font-size: 2rem;
-        font-weight: 700;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0 0 1.5rem 2rem;
+      background: #fdfdfd;
+      height: 2.5rem;
+      width: 2.5rem;
+      border-radius: 5px;
+      text-align: center;
+      box-shadow: 0px 2px 4px 2px rgba(0, 0, 0, 0.1);
+      font-size: 2rem;
+      font-weight: 700;
     }
-}
+  }
+
+  .b-container {
+    height: 100%;
+    width: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #2a9e6e;
+    .formBox {
+      /*  backgroundcolor: #000; */
+      /* display: flex;
+        flex-direction: column; */
+    }
+    .letterBox {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0 0 1.5rem 2rem;
+      background: #fdfdfd;
+      height: 2.5rem;
+      width: 2.5rem;
+      border-radius: 5px;
+      text-align: center;
+      box-shadow: 0px 2px 4px 2px rgba(0, 0, 0, 0.1);
+      font-size: 2rem;
+      font-weight: 700;
+    }
+  }
 `;
 
 const FormCard1 = styled.div`
@@ -194,38 +208,37 @@ const FormCard1 = styled.div`
   box-shadow: 0px 6px 15px 2px rgba(0, 0, 0, 0.1);
   .formContainer {
     height: 100%;
-    display:flex;
+    display: flex;
     justify-content: flex-start;
     align-items: center;
     flex-direction: column;
     padding: 1rem 4rem;
-    img{
-        margin-top: 1rem;
-        height: 5rem;
+    img {
+      margin-top: 1rem;
+      height: 5rem;
     }
-    h4{
-      padding-top: .5rem;
+    h4 {
+      padding-top: 0.5rem;
     }
-    h5{
-        padding-top: 1.5rem;
-        text-transform: uppercase;
-        letter-spacing: 1px;
+    h5 {
+      padding-top: 1.5rem;
+      text-transform: uppercase;
+      letter-spacing: 1px;
     }
-    p{
-        padding-top: 1.5rem;
-        text-align: center;
+    p {
+      padding-top: 1.5rem;
+      text-align: center;
     }
-    button{
-        margin-top: 1rem;
-        padding: 1rem 2rem;
-        background: #036440;
-        color: #f4f4f4;
-        border: none;
-        border-radius: 5px;
+    button {
+      margin-top: 1rem;
+      padding: 1rem 2rem;
+      background: #036440;
+      color: #f4f4f4;
+      border: none;
+      border-radius: 5px;
     }
-    
   }
-  .switchGrid{
+  .switchGrid {
     padding-top: 3rem;
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -275,47 +288,45 @@ const FormCard1 = styled.div`
     background-color: rgba(70, 142, 70, 0.8);
   }
   input:focus + .slider {
-    box-shadow: 0 0 1px #fbb439;
+    box-shadow: 0 0 1px rgba(70, 142, 70, 0.8);
   }
 
   input:checked + .slider:before {
     transform: translateX(1.5em);
   }
-  
+
   @media (max-width: 1280px) {
-    .formContainer{
+    .formContainer {
       padding: 0 4rem;
-      img{
+      img {
         height: 4rem;
       }
-      h5{
-          padding-top: 1.2rem;
-          text-transform: uppercase;
-          letter-spacing: 1px;
-          font-size: .8rem;
+      h5 {
+        padding-top: 1.2rem;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        font-size: 0.8rem;
       }
-      p{
-          padding-top: 1.2rem;
-          text-align: center;
-          font-size: .9rem;
+      p {
+        padding-top: 1.2rem;
+        text-align: center;
+        font-size: 0.9rem;
       }
-      button{
-        padding: .8rem 1.8rem;
+      button {
+        padding: 0.8rem 1.8rem;
         background: #036440;
         color: #f4f4f4;
         border: none;
         border-radius: 5px;
-        font-size: .9rem;
+        font-size: 0.9rem;
       }
     }
-    .switchGrid{
+    .switchGrid {
       padding-top: 2rem;
       display: grid;
       grid-template-columns: 1fr 1fr;
       gap: 1rem 3rem;
     }
-    
-    
   }
 `;
 const FormCard2 = styled.div`
@@ -328,46 +339,46 @@ const FormCard2 = styled.div`
 
   .formContainer {
     height: 100%;
-    display:flex;
+    display: flex;
     justify-content: flex-start;
     align-items: center;
     flex-direction: column;
     padding: 1rem 4rem;
-    img{
-        margin-top: 1rem;
-        height: 5rem;
-        }
-    h4{
-      padding-top: .5rem;
+    img {
+      margin-top: 1rem;
+      height: 5rem;
     }
-    h5{
-        padding-top: 1.5rem;
-        text-transform: uppercase;
-        letter-spacing: 1px;
+    h4 {
+      padding-top: 0.5rem;
     }
-    p{
-        padding-top: 1.5rem;
-        text-align: center;
+    h5 {
+      padding-top: 1.5rem;
+      text-transform: uppercase;
+      letter-spacing: 1px;
     }
-    .buttons{
+    p {
+      padding-top: 1.5rem;
+      text-align: center;
+    }
+    .buttons {
       display: flex;
       flex-direction: column;
       justify-content: center;
     }
-    button{
-        margin-top: 1rem;
-        padding: 1rem 2rem;
-        background: #036440;
-        color: #f4f4f4;
-        border: none;
-        border-radius: 5px;
+    button {
+      margin-top: 1rem;
+      padding: 1rem 2rem;
+      background: #036440;
+      color: #f4f4f4;
+      border: none;
+      border-radius: 5px;
     }
-    .smallButton{
-      padding: .8rem 1.2rem;
+    .smallButton {
+      padding: 0.8rem 1.2rem;
       background: #8d8e8f;
     }
   }
-  .switchGrid{
+  .switchGrid {
     padding-top: 3rem;
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -403,58 +414,58 @@ const FormCard2 = styled.div`
     transform-origin: bottom left;
     transition: 120ms transform ease-in-out;
     background-color: #000;
-    
   }
   input[type='checkbox']:checked::before {
     transform: scale(1);
   }
+  input[type='checkbox']:checked {
+    background-color: rgba(70, 142, 70, 0.8);
+  }
   @media (max-width: 1280px) {
-    .formContainer{
+    .formContainer {
       padding: 0 4rem;
-      img{
+      img {
         height: 4rem;
       }
-      h5{
-          padding-top: 1.2rem;
-          text-transform: uppercase;
-          letter-spacing: 1px;
-          font-size: .8rem;
+      h5 {
+        padding-top: 1.2rem;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        font-size: 0.8rem;
       }
-      p{
-          padding-top: 1.2rem;
-          text-align: center;
-          font-size: .9rem;
+      p {
+        padding-top: 1.2rem;
+        text-align: center;
+        font-size: 0.9rem;
       }
-      .buttons{
+      .buttons {
         display: flex;
         flex-direction: row;
         /* align-items: space-around;
         justify-content: space-around; */
       }
-      button{
-        padding: .8rem 1.8rem;
+      button {
+        padding: 0.8rem 1.8rem;
         background: #036440;
         color: #f4f4f4;
         border: none;
         border-radius: 5px;
-        font-size: .9rem;
+        font-size: 0.9rem;
       }
-      .smallButton{
-        padding: .7rem .8rem;
-        margin-left: .5rem;
+      .smallButton {
+        padding: 0.7rem 0.8rem;
+        margin-left: 0.5rem;
         background: #8d8e8f;
-        font-size: .8rem;
+        font-size: 0.8rem;
       }
     }
-    
-    .switchGrid{
+
+    .switchGrid {
       padding-top: 1rem;
       display: grid;
       grid-template-columns: 1fr 1fr;
-      gap: .8rem 3rem;
+      gap: 0.8rem 3rem;
     }
-    
-    
   }
 `;
 
