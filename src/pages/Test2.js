@@ -1,15 +1,26 @@
 import { useNavigate } from 'react-router-dom';
+import React, { useState } from 'react';
 //Styles & Animation
 import styled from 'styled-components';
 import { motion } from 'framer-motion';
 import AnimatedPage from '../components/AnimatedPage';
+import TheModal from '../components/Modal';
 
-const Test2 = () => {
+const Test2 = ({open, setOpen}) => {
   const navigate = useNavigate();
+  //state for showing modal
+  const [show, setShow] = useState(false)
+
+  //Function to trigger the modal
+  const handleClick = (e) => {
+    e.preventDefault();
+    setShow(true)
+    setOpen(true)
+  }
   return (
     <AnimatedPage>
+      {show && <TheModal open={open} setOpen={setOpen}/>}
       <StyledForm>
-      
         <div className="a-container">
         <ArrowButton
             onClick={() => navigate('/test1')}
@@ -61,7 +72,7 @@ const Test2 = () => {
                           <input type="text" className='inputBar mediumLong item-d'></input>
                         </div>
                       </div>
-                      <input type="submit" className='button'/>
+                      <input type="submit" className='button' onClick={handleClick}/>
                     </form>
                 
             </FormCard1>
@@ -104,7 +115,7 @@ const Test2 = () => {
                           <input type="text" className='inputBar item-d'></input>
                         </div>
                       </div>
-                      <input type="submit" className='button' value="Register"/>
+                      <input type="submit" className='button' value="Register" onClick={handleClick}/>
                     </form>
 
             </FormCard2>

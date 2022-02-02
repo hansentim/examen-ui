@@ -1,14 +1,25 @@
 import { useNavigate } from 'react-router-dom';
+import React, { useState } from 'react';
 //Styles & Animation
 import styled from 'styled-components';
 import { motion } from 'framer-motion';
 import AnimatedPage from '../components/AnimatedPage';
 import logo from '../img/chillalogo.png';
+import TheModal from '../components/Modal';
 
-const Test3 = () => {
+const Test3 = ({open, setOpen}) => {
   const navigate = useNavigate();
+  //state for showing modal
+  const [show, setShow] = useState(false)
+
+  //Function to trigger the modal
+  const handleClick = () => {
+    setShow(true)
+    setOpen(true)
+  }
   return (
     <AnimatedPage>
+      {show && <TheModal open={open} setOpen={setOpen}/>}
       <StyledForm>
         <div className="a-container">
           <ArrowButton
@@ -33,7 +44,7 @@ const Test3 = () => {
                   "ACCEPTERA" godkänner du användningen av de kakor som är
                   markerade.{' '}
                 </p>
-                <button>ACCEPTERA</button>
+                <button onClick={handleClick}>ACCEPTERA</button>
                 <div className="switchGrid">
                   <div className="switchBox">
                     <label className="switch">
@@ -84,8 +95,8 @@ const Test3 = () => {
                   markerade.{' '}
                 </p>
                 <div className="buttons">
-                  <button>ACCEPTERA</button>
-                  <button className="smallButton">
+                  <button onClick={handleClick}>ACCEPTERA</button>
+                  <button className="smallButton" onClick={handleClick}>
                     Acceptera endast nödvändiga cookies
                   </button>
                 </div>
