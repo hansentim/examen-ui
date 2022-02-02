@@ -13,9 +13,6 @@ const GlobalStyles = createGlobalStyle`
         @media (max-width: 1280px){
         font-size: 85%;
         }
-       /*  @media (min-width: 1920px){
-        font-size: 120%;
-    } */
 
     }
    body{
@@ -24,6 +21,7 @@ const GlobalStyles = createGlobalStyle`
         font-family: 'Montserrat', sans-serif;
         color: #202020;
         overflow-x: hidden;
+      background: #f1f1f1;;
         &::-webkit-scrollbar {
     width: 0.5rem;
   
