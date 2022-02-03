@@ -49,7 +49,7 @@ export const titleAnimB = {
   show: {
     x: 0,
     transition: {
-      duration: 1.5,
+      duration: 1.3,
       ease: 'easeOut',
       /* staggerChildren: 0.5, */
     },

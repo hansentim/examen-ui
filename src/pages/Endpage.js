@@ -54,8 +54,8 @@ const HeartContainer = styled.div`
   .legend {
     position: relative;
     z-index: 2;
-    font-size: 1.2rem;
-    font-weight: 400;
+    font-size: 1.5rem;
+    font-weight: 600;
   }
   h1 {
     padding-bottom: 1rem;
