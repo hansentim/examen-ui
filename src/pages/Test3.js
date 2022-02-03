@@ -44,7 +44,6 @@ const Test3 = ({ open, setOpen }) => {
                   "ACCEPTERA" godkänner du användningen av de kakor som är
                   markerade.{' '}
                 </p>
-                <button onClick={handleClick}>ACCEPTERA</button>
                 <div className="switchGrid">
                   <div className="switchBox">
                     <label className="switch">
@@ -75,6 +74,7 @@ const Test3 = ({ open, setOpen }) => {
                     <h4>Marketing</h4>
                   </div>
                 </div>
+                <button onClick={handleClick}>ACCEPTERA</button>
               </div>
             </FormCard1>
           </div>
@@ -253,7 +253,7 @@ const FormCard1 = styled.div`
       }
     }
     button {
-      margin-top: 1rem;
+      margin-top: 2rem;
       padding: 1rem 2rem;
       background: #036440;
       color: #f4f4f4;
@@ -266,7 +266,7 @@ const FormCard1 = styled.div`
     }
   }
   .switchGrid {
-    padding-top: 3rem;
+    padding-top: 2rem;
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 3rem 4rem;
