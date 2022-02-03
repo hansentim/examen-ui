@@ -16,7 +16,7 @@ export const pageAnimation = {
     x: 0,
     opacity: 1,
     transition: {
-      duration: 0.5,
+      duration: 0.3,
       ease: 'easeOut',
 
       staggerChildren: 0.25,
@@ -29,9 +29,8 @@ export const titleAnim = {
   show: {
     x: 0,
     transition: {
-      duration: 0.75,
+      duration: 0.5,
       ease: 'easeOut',
-      /* staggerChildren: 0.5, */
     },
   },
 };
@@ -40,7 +39,7 @@ export const pageAnimationB = {
   show: {
     x: 0,
     opacity: 1,
-    transition: { duration: 1, ease: 'easeOut', staggerChildren: 0.5 },
+    transition: { duration: 0.75, ease: 'easeOut', staggerChildren: 0.5 },
   },
 };
 
@@ -49,9 +48,8 @@ export const titleAnimB = {
   show: {
     x: 0,
     transition: {
-      duration: 1.3,
+      duration: 1,
       ease: 'easeOut',
-      /* staggerChildren: 0.5, */
     },
   },
 };
@@ -62,7 +60,6 @@ export const titleAnimC = {
     transition: {
       duration: 1.5,
       ease: 'easeOut',
-      /* staggerChildren: 0.5, */
     },
   },
 };

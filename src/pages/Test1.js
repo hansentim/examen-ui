@@ -52,15 +52,15 @@ const Test1 = () => {
                       Already have an account? <span>Sign in</span>
                     </p>
                     <div className="label">
-                      <label>MY NAME IS</label>
+                      <label>MY NAME IS (Optional)</label>
                       <input id="text" type="text" />
                     </div>
                     <div className="label">
-                      <label>MAIL ME AT</label>
+                      <label>CALL ME ON (Optional)</label>
                       <input id="text" type="email" />
                     </div>
                     <div className="label">
-                      <label>CALL ME ON</label>
+                      <label>MAIL ME AT (Required)</label>
                       <input id="text" type="text" />
                     </div>
                     <div className="switchBox">
@@ -72,7 +72,7 @@ const Test1 = () => {
                       <p>Yes, I want to receive my newsletter emails!</p>
                     </div>
                     <div className="switchBox">
-                      <label className="switch">
+                      <label className="switch switchTwo">
                         <input type="checkbox" />
                         <span className="slider"></span>
                       </label>
@@ -108,11 +108,11 @@ const Test1 = () => {
                       <input id="text" type="text" />
                     </div>
                     <div className="label">
-                      <label>Email</label>
+                      <label>Phone</label>
                       <input id="text" type="email" />
                     </div>
                     <div className="label">
-                      <label>Phone</label>
+                      <label>Email (Required)</label>
                       <input id="text" type="text" />
                     </div>
                     <div className="switchBox">
@@ -287,7 +287,7 @@ const StyledFormA = styled.form`
     border: none;
     border-bottom: 1.5px solid #fdfdfd;
     outline: none;
-    width: 70%;
+    width: 60%;
     color: #fdfdfd;
   }
   .ctBox {
@@ -404,6 +404,17 @@ const StyledFormA = styled.form`
   }
   .buttonA:active {
     transform: translateY(-1px);
+  }
+  .switchTwo {
+    .slider {
+      background-color: #646464;
+    }
+    input:checked + .slider {
+      background-color: #54bd92;
+    }
+    input:focus + .slider {
+      box-shadow: 0 0 1px #54bd92;
+    }
   }
 `;
 

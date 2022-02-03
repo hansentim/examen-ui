@@ -154,6 +154,9 @@ const StyledAnim = styled.div`
   @media (min-width: 1920px) {
     padding: 15rem 15rem 1rem 15rem;
   }
+  @media (min-width: 1300px) {
+    padding: 20rem 15rem 1rem 15rem;
+  }
   @media (min-width: 2500px) {
     padding: 20rem 15rem 1rem 15rem;
   }
