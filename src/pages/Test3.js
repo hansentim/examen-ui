@@ -7,19 +7,19 @@ import AnimatedPage from '../components/AnimatedPage';
 import logo from '../img/chillalogo.png';
 import TheModal from '../components/Modal';
 
-const Test3 = ({open, setOpen}) => {
+const Test3 = ({ open, setOpen }) => {
   const navigate = useNavigate();
   //state for showing modal
-  const [show, setShow] = useState(false)
+  const [show, setShow] = useState(false);
 
   //Function to trigger the modal
   const handleClick = () => {
-    setShow(true)
-    setOpen(true)
-  }
+    setShow(true);
+    setOpen(true);
+  };
   return (
     <AnimatedPage>
-      {show && <TheModal open={open} setOpen={setOpen}/>}
+      {show && <TheModal open={open} setOpen={setOpen} />}
       <StyledForm>
         <div className="a-container">
           <ArrowButton
@@ -109,19 +109,19 @@ const Test3 = ({open, setOpen}) => {
                   </div>
                   <div className="switchBox">
                     <label className="form-control">
-                      <input type="checkbox" defaultChecked/>
+                      <input type="checkbox" defaultChecked />
                     </label>
                     <h4>Funktionella</h4>
                   </div>
                   <div className="switchBox">
                     <label className="form-control">
-                      <input type="checkbox" defaultChecked/>
+                      <input type="checkbox" defaultChecked />
                     </label>
                     <h4>Statistiska</h4>
                   </div>
                   <div className="switchBox">
                     <label className="form-control">
-                      <input type="checkbox" defaultChecked/>
+                      <input type="checkbox" defaultChecked />
                     </label>
                     <h4>Marketing</h4>
                   </div>
@@ -227,6 +227,10 @@ const FormCard1 = styled.div`
     img {
       margin-top: 1rem;
       height: 5rem;
+      @media (min-width: 2500px) {
+        margin-top: 4.5rem;
+        height: 6rem;
+      }
     }
     h4 {
       padding-top: 0.5rem;
@@ -235,10 +239,18 @@ const FormCard1 = styled.div`
       padding-top: 1.5rem;
       text-transform: uppercase;
       letter-spacing: 1px;
+      @media (min-width: 2500px) {
+        font-size: 1rem;
+      }
     }
     p {
       padding-top: 1.5rem;
       text-align: center;
+      @media (min-width: 2500px) {
+        font-size: 1.1rem;
+        padding-top: 1.9rem;
+        padding-bottom: 1rem;
+      }
     }
     button {
       margin-top: 1rem;
@@ -247,6 +259,10 @@ const FormCard1 = styled.div`
       color: #f4f4f4;
       border: none;
       border-radius: 5px;
+      @media (min-width: 2500px) {
+        padding: 1.2rem 3.2rem;
+        margin: 1.5rem 0 1rem 0;
+      }
     }
   }
   .switchGrid {
