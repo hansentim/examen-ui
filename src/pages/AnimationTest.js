@@ -168,7 +168,7 @@ const StyledAnim = styled.div`
     position: relative;
 
     @media (max-width: 1280px) {
-      padding-bottom: 5rem;
+      padding: 1rem 0 5rem 0;
     }
     @media (min-width: 1920px) {
       font-size: 2.5rem;
