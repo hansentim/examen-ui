@@ -501,7 +501,7 @@ const FormCard2 = styled.div`
       height: 2.2rem;
     }
   }
-  /* }
+  /*   }
 } */
 `;
 

@@ -261,7 +261,7 @@ const FormCard1 = styled.div`
       border-radius: 5px;
       @media (min-width: 2500px) {
         padding: 1.2rem 3.2rem;
-        margin: 1.5rem 0 1rem 0;
+        margin: 2.5rem 0 2rem 0;
       }
     }
   }
@@ -325,6 +325,7 @@ const FormCard1 = styled.div`
   @media (max-width: 1280px) {
     .formContainer {
       padding: 0 4rem;
+
       img {
         height: 4rem;
       }
@@ -374,7 +375,12 @@ const FormCard2 = styled.div`
     img {
       margin-top: 1rem;
       height: 5rem;
+      @media (min-width: 2500px) {
+        margin-top: 4.5rem;
+        height: 6rem;
+      }
     }
+
     h4 {
       padding-top: 0.5rem;
     }
@@ -382,10 +388,18 @@ const FormCard2 = styled.div`
       padding-top: 1.5rem;
       text-transform: uppercase;
       letter-spacing: 1px;
+      @media (min-width: 2500px) {
+        font-size: 1rem;
+      }
     }
     p {
       padding-top: 1.5rem;
       text-align: center;
+      @media (min-width: 2500px) {
+        font-size: 1.1rem;
+        padding-top: 1.9rem;
+        padding-bottom: 1rem;
+      }
     }
     .buttons {
       display: flex;
@@ -399,10 +413,18 @@ const FormCard2 = styled.div`
       color: #f4f4f4;
       border: none;
       border-radius: 5px;
+      @media (min-width: 2500px) {
+        margin-top: 2.5rem;
+        padding: 1.2rem 2rem;
+      }
     }
     .smallButton {
       padding: 0.8rem 1.2rem;
       background: #8d8e8f;
+      @media (min-width: 2500px) {
+        margin-bottom: 1rem;
+        padding: 1.3rem 1.5rem;
+      }
     }
   }
   .switchGrid {
