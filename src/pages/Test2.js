@@ -39,7 +39,7 @@ const Test2 = ({ open, setOpen }) => {
                 <div className="personalInfo">
                   <h4 className="sectionTitle">Personal Information</h4>
                   <label>First name</label>
-                  <input type="text" className="inputBar"></input>
+                  <input type="text" className="inputBar" ></input>
                   <label>Last name</label>
                   <input type="text" className="inputBar"></input>
                   <label>Date of birth</label>
@@ -102,7 +102,7 @@ const Test2 = ({ open, setOpen }) => {
                 <h2 className="formTitle">Registration Form</h2>
                 <div className="personalInfo">
                   <label>Full name</label>
-                  <input type="text" className="inputBar"></input>
+                  <input type="text" className="inputBar" ></input>
                   <label>Date of birth</label>
                   <div className="dates">
                     <input
@@ -124,19 +124,20 @@ const Test2 = ({ open, setOpen }) => {
                 </div>
                 <div className="accountInfo">
                   <label>Email</label>
-                  <input type="email" className="inputBar"></input>
+                  <input type="email" className="inputBar" ></input>
                   <label>Password</label>
-                  <input type="password" className="inputBar"></input>
+                  <input type="password" className="inputBar" ></input>
                   <label>Confirm password</label>
-                  <input type="password" className="inputBar"></input>
+                  <input type="password" className="inputBar" ></input>
                 </div>
                 <div className="contactInfo">
                   <label>Phone</label>
-                  <input type="tel" className="inputBar"></input>
+                  <input type="tel" className="inputBar"
+                  ></input>
                   <label>Address</label>
-                  <input type="text" className="inputBar"></input>
+                  <input type="text" className="inputBar" ></input>
                   <div className="cityContainer">
-                    <label className="item-a">Zip code</label>
+                    <label className="item-a" >Zip code</label>
                     <input
                       type="text"
                       className="inputBar medium item-b"
@@ -287,17 +288,25 @@ const FormCard1 = styled.div`
   .inputBar {
     height: 2rem;
     border-radius: 40px;
-    border: 1px solid #3d3d3d;
+    /* border: 1px solid #3d3d3d; */
+    border: none;
     margin: 0.2rem 0;
-    padding-left: 0.5rem;
+    padding-left: 1rem;
+    outline: none;
+    ::placeholder{ 
+      opacity: .7; 
+    }
   }
   .short {
     width: 5.5rem;
     text-align: center;
-    padding-right: 0.5rem;
+    padding-right: 1rem;
   }
   .medium {
     width: 6rem;
+  }
+  .mediumLong{
+    width: 100%
   }
   .cityContainer {
     display: grid;
@@ -330,6 +339,11 @@ const FormCard1 = styled.div`
     font-weight: bold;
     border: none;
     margin: 1rem 1.8rem;
+    cursor: pointer;
+  }
+  .button:hover{
+    background: #E35331;
+    box-shadow: 0px 15px 20px rgba(0, 0, 0, 0.2);
   }
   @media (max-width: 1280px) {
     width: 35vw;
@@ -351,9 +365,6 @@ const FormCard1 = styled.div`
     .medium {
       width: 5.5rem;
     }
-    .mediumLong {
-      width: 100%;
-    }
     .button {
       width: 144px;
       height: 32px;
@@ -373,6 +384,39 @@ const FormCard1 = styled.div`
     }
     .button {
       margin: 1.2rem 3rem;
+    }
+  }
+  @media (min-width: 2500px) {
+    .formTitle {
+      font-size: 3rem;
+      /* padding: 2rem 0; */
+    }
+    label {
+      font-size: 1.2rem;
+      margin: 0.5rem 0 0 0.7rem;
+    }
+    .sectionTitle {
+      font-size: 1.5rem;
+      margin: 0.7rem 0;
+    }
+    .inputBar {
+      height: 3rem;
+      margin: 0.5rem 0;
+      font-size: 1.3rem;
+      padding-left: 1rem;
+    }
+    .short {
+      width: 7rem;
+      text-align: center;
+      padding-right: 1rem;
+    }
+    .medium {
+      width: 6.5rem;
+    }
+    .button {
+      height: 65px;
+      font-size: 1.5rem;
+      margin-top: 2rem;
     }
   }
 `;
@@ -418,12 +462,19 @@ const FormCard2 = styled.div`
   .inputBar {
     height: 2.5rem;
     border-radius: 40px;
-    border: 1px solid #3d3d3d;
+    /* border: 1px solid #3d3d3d; */
+    border: none;
     margin: 0.3rem 0;
+    padding-left: 1rem;
+    outline: none;
+    ::placeholder{ 
+      opacity: .7; 
+    }
   }
   .short {
     width: 8.5rem;
     text-align: center;
+    padding-right: 1rem;
   }
   .medium {
     width: 9rem;
@@ -459,6 +510,11 @@ const FormCard2 = styled.div`
     font-weight: bold;
     border: none;
     margin-top: 2.5rem;
+    cursor: pointer;
+  }
+  .button:hover {
+    background: #126D6B;
+    box-shadow: 0px 15px 20px rgba(0, 0, 0, 0.2);
   }
   @media (max-width: 1280px) {
     width: 35vw;
@@ -501,8 +557,35 @@ const FormCard2 = styled.div`
       height: 2.2rem;
     }
   }
-  /*   }
-} */
+  @media (min-width: 2500px) {
+    .formTitle {
+      font-size: 3rem;
+      padding: 2rem 0;
+    }
+    label {
+      font-size: 1.2rem;
+      margin: 0.8rem 0 0 0.7rem;
+    }
+    .inputBar {
+      height: 3rem;
+      margin: 0.5rem 0;
+      font-size: 1.3rem;
+      padding-left: 1rem;
+    }
+    .short {
+      width: 12rem;
+      text-align: center;
+      padding-right: 1rem;
+    }
+    .medium {
+      width: 11rem;
+    }
+    .button {
+      height: 75px;
+      font-size: 2rem;
+      margin-top: 3rem;
+    }
+  }
 `;
 
 const ArrowButton = styled(motion.button)`
