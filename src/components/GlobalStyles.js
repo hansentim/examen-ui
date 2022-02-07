@@ -21,7 +21,6 @@ const GlobalStyles = createGlobalStyle`
         font-family: 'Montserrat', sans-serif;
         color: #202020;
         overflow-x: hidden;
-      background: #f1f1f1;;
         &::-webkit-scrollbar {
     width: 0.5rem;
   
