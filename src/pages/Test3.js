@@ -35,7 +35,7 @@ const Test3 = ({ open, setOpen }) => {
             <FormCard1>
               <div className="formContainer">
                 <img src={logo} alt="" />
-                <h5>Vi tar hand om dina uppgifter</h5>
+                <h5>Vi tar hand om dina uppgifter HEJ</h5>
                 <p>
                   Chilla vill ge dig en säker och god upplevelse. För detta
                   använder vi kakor. Vissa av dessa kakor är nödvändiga för att
