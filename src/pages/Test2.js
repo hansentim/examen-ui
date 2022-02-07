@@ -392,7 +392,7 @@ const FormCard1 = styled.div`
       /* padding: 2rem 0; */
     }
     label {
-      font-size: 1.2rem;
+      font-size: 1rem;
       margin: 0.5rem 0 0 0.7rem;
     }
     .sectionTitle {
@@ -400,7 +400,7 @@ const FormCard1 = styled.div`
       margin: 0.7rem 0;
     }
     .inputBar {
-      height: 3rem;
+      height: 2.6rem;
       margin: 0.5rem 0;
       font-size: 1.3rem;
       padding-left: 1rem;
