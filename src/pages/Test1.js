@@ -289,6 +289,9 @@ const StyledFormA = styled.form`
     outline: none;
     width: 60%;
     color: #fdfdfd;
+    @media (max-width: 1280px) {
+      width: 50%;
+    }
   }
   .ctBox {
     display: flex;
@@ -388,6 +391,9 @@ const StyledFormA = styled.form`
     transition: all 0.3s ease 0s;
     cursor: pointer;
     outline: none;
+    @media (max-width: 1280px) {
+      margin-top: 1rem;
+    }
     @media (min-width: 1920px) {
       margin-top: 2rem;
     }
@@ -579,6 +585,9 @@ const StyledFormB = styled.form`
     transition: all 0.3s ease 0s;
     cursor: pointer;
     outline: none;
+    @media (max-width: 1280px) {
+      margin-top: 1rem;
+    }
     @media (min-width: 1920px) {
       margin-top: 1.5rem;
     }
