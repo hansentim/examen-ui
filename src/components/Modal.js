@@ -1,14 +1,14 @@
-import React, { useState } from 'react';
 //Material UI
 import Box from '@mui/material/Box';
 import Typography from '@mui/material/Typography';
 import Modal from '@mui/material/Modal';
 
-function TheModal({open, setOpen}) {
+function TheModal({ open, setOpen }) {
   //Stänga modal
   const handleClose = () => setOpen(false);
 
-  return <div>
+  return (
+    <div>
       <Modal
         open={open}
         onClose={handleClose}
@@ -25,22 +25,20 @@ function TheModal({open, setOpen}) {
           </Typography>
         </Box>
       </Modal>
-  </div>;
-
-  
+    </div>
+  );
 }
 //Style för modalen
 const style = {
-    position: 'absolute',
-    top: '50%',
-    left: '50%',
-    transform: 'translate(-50%, -50%)',
-    width: 350,
-    bgcolor: '#fdfdfd',
-    borderRadius: 5,
-    boxShadow: 24,
-    p: 10,
-  };
-  
+  position: 'absolute',
+  top: '50%',
+  left: '50%',
+  transform: 'translate(-50%, -50%)',
+  width: 350,
+  bgcolor: '#fdfdfd',
+  borderRadius: 5,
+  boxShadow: 24,
+  p: 10,
+};
 
 export default TheModal;
