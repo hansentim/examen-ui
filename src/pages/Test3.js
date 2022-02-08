@@ -9,10 +9,10 @@ import TheModal from '../components/Modal';
 
 const Test3 = ({ open, setOpen }) => {
   const navigate = useNavigate();
-  //state for showing modal
+  //state för att visa modal
   const [show, setShow] = useState(false);
 
-  //Function to trigger the modal
+  //Function för att trigga modalen
   const handleClick = () => {
     setShow(true);
     setOpen(true);
@@ -37,9 +37,12 @@ const Test3 = ({ open, setOpen }) => {
                 <img src={logo} alt="" />
                 <h5>We take care of your data</h5>
                 <p>
-                  Chilla wants to give you a safe and good experience. <br/>
-                  For this we use cookies. Some of these cookies are necessary to make our website work, så don't eat them! Other cookies help you get a tailored experience. <br/>By clicking "ACCEPT" you accept the use of the cookies that are marked.
-                  {' '}
+                  Chilla wants to give you a safe and good experience. <br />
+                  For this we use cookies. Some of these cookies are necessary
+                  to make our website work, så don't eat them! Other cookies
+                  help you get a tailored experience. <br />
+                  By clicking "ACCEPT" you accept the use of the cookies that
+                  are marked.{' '}
                 </p>
                 <div className="switchGrid">
                   <div className="switchBox">
@@ -84,8 +87,12 @@ const Test3 = ({ open, setOpen }) => {
                 <img src={logo} alt="" />
                 <h5>We take care of your data</h5>
                 <p>
-                Chilla wants to give you a safe and good experience. <br/>
-                  For this we use cookies. Some of these cookies are necessary to make our website work, så don't eat them! Other cookies help you get a tailored experience. <br/>By clicking "ACCEPT" you accept the use of the cookies that are marked.{' '}
+                  Chilla wants to give you a safe and good experience. <br />
+                  For this we use cookies. Some of these cookies are necessary
+                  to make our website work, så don't eat them! Other cookies
+                  help you get a tailored experience. <br />
+                  By clicking "ACCEPT" you accept the use of the cookies that
+                  are marked.{' '}
                 </p>
                 <div className="buttons">
                   <button onClick={handleClick}>ACCEPT</button>
@@ -137,7 +144,7 @@ const Test3 = ({ open, setOpen }) => {
   );
 };
 
-//Syle
+//Style
 
 const StyledForm = styled.div`
   display: flex;
@@ -154,9 +161,6 @@ const StyledForm = styled.div`
     justify-content: center;
     background: #54bd92;
     .formBox {
-      /* backgroundcolor: #000; */
-      /* display: flex;
-        flex-direction: column; */
     }
     .letterBox {
       display: flex;
@@ -182,9 +186,6 @@ const StyledForm = styled.div`
     justify-content: center;
     background: #2a9e6e;
     .formBox {
-      /*  backgroundcolor: #000; */
-      /* display: flex;
-        flex-direction: column; */
     }
     .letterBox {
       display: flex;
@@ -341,7 +342,6 @@ const FormCard1 = styled.div`
         border: none;
         border-radius: 5px;
         font-size: 0.9rem;
-        
       }
     }
     .switchGrid {
@@ -425,7 +425,7 @@ const FormCard2 = styled.div`
     }
   }
   .switchGrid {
-    padding-top: 3rem;
+    margin-top: 1rem;
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 3rem 4rem;
@@ -437,11 +437,7 @@ const FormCard2 = styled.div`
     flex-direction: column;
   }
   input[type='checkbox'] {
-    /* Add if not using autoprefixer */
     -webkit-appearance: none;
-
-    /* font: inherit; */
-
     color: currentColor;
     width: 1.5em;
     height: 1.5em;
@@ -487,9 +483,6 @@ const FormCard2 = styled.div`
       .buttons {
         display: flex;
         flex-direction: row;
-        /* align-items: space-around;
-        justify-content: space-around; */
-        
       }
       button {
         padding: 0.8rem 1.8rem;
@@ -498,7 +491,6 @@ const FormCard2 = styled.div`
         border: none;
         border-radius: 5px;
         font-size: 0.9rem;
-        
       }
       .smallButton {
         padding: 0.7rem 0.8rem;

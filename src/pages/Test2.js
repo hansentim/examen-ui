@@ -8,10 +8,10 @@ import TheModal from '../components/Modal';
 
 const Test2 = ({ open, setOpen }) => {
   const navigate = useNavigate();
-  //state for showing modal
+  //state för att visa modal
   const [show, setShow] = useState(false);
 
-  //Function to trigger the modal
+  //Function för att trigga modal
   const handleClick = (e) => {
     e.preventDefault();
     setShow(true);
@@ -39,7 +39,7 @@ const Test2 = ({ open, setOpen }) => {
                 <div className="personalInfo">
                   <h4 className="sectionTitle">Personal Information</h4>
                   <label>First name</label>
-                  <input type="text" className="inputBar" ></input>
+                  <input type="text" className="inputBar"></input>
                   <label>Last name</label>
                   <input type="text" className="inputBar"></input>
                   <label>Date of birth</label>
@@ -102,7 +102,7 @@ const Test2 = ({ open, setOpen }) => {
                 <h2 className="formTitle">Registration Form</h2>
                 <div className="personalInfo">
                   <label>Full name</label>
-                  <input type="text" className="inputBar" ></input>
+                  <input type="text" className="inputBar"></input>
                   <label>Date of birth</label>
                   <div className="dates">
                     <input
@@ -124,20 +124,19 @@ const Test2 = ({ open, setOpen }) => {
                 </div>
                 <div className="accountInfo">
                   <label>Email</label>
-                  <input type="email" className="inputBar" ></input>
+                  <input type="email" className="inputBar"></input>
                   <label>Password</label>
-                  <input type="password" className="inputBar" ></input>
+                  <input type="password" className="inputBar"></input>
                   <label>Confirm password</label>
-                  <input type="password" className="inputBar" ></input>
+                  <input type="password" className="inputBar"></input>
                 </div>
                 <div className="contactInfo">
                   <label>Phone</label>
-                  <input type="tel" className="inputBar"
-                  ></input>
+                  <input type="tel" className="inputBar"></input>
                   <label>Address</label>
-                  <input type="text" className="inputBar" ></input>
+                  <input type="text" className="inputBar"></input>
                   <div className="cityContainer">
-                    <label className="item-a" >Zip code</label>
+                    <label className="item-a">Zip code</label>
                     <input
                       type="text"
                       className="inputBar medium item-b"
@@ -170,7 +169,7 @@ const Test2 = ({ open, setOpen }) => {
   );
 };
 
-//Syle
+//Style
 
 const StyledForm = styled.div`
   display: flex;
@@ -188,9 +187,6 @@ const StyledForm = styled.div`
     background: #e0fbfc;
 
     .formBox {
-      /* backgroundcolor: #000; */
-      /* display: flex;
-        flex-direction: column; */
     }
     .letterBox {
       display: flex;
@@ -217,9 +213,6 @@ const StyledForm = styled.div`
     justify-content: center;
     background: #b4a0ff;
     .formBox {
-      /* backgroundcolor: #000; */
-      /* display: flex;
-        flex-direction: column; */
     }
     .letterBox {
       display: flex;
@@ -248,7 +241,6 @@ const FormCard1 = styled.div`
   box-shadow: 0px 6px 15px 2px rgba(0, 0, 0, 0.1);
   display: flex;
   align-items: center;
-  /* justify-content:center; */
   flex-direction: column;
   .formTitle {
     font-size: 2.5rem;
@@ -288,13 +280,12 @@ const FormCard1 = styled.div`
   .inputBar {
     height: 2rem;
     border-radius: 40px;
-    /* border: 1px solid #3d3d3d; */
     border: none;
     margin: 0.2rem 0;
     padding-left: 1rem;
     outline: none;
-    ::placeholder{ 
-      opacity: .7; 
+    ::placeholder {
+      opacity: 0.7;
     }
   }
   .short {
@@ -305,8 +296,8 @@ const FormCard1 = styled.div`
   .medium {
     width: 6rem;
   }
-  .mediumLong{
-    width: 100%
+  .mediumLong {
+    width: 100%;
   }
   .cityContainer {
     display: grid;
@@ -341,8 +332,8 @@ const FormCard1 = styled.div`
     margin: 1rem 1.8rem;
     cursor: pointer;
   }
-  .button:hover{
-    background: #E35331;
+  .button:hover {
+    background: #e35331;
     box-shadow: 0px 15px 20px rgba(0, 0, 0, 0.2);
   }
   @media (max-width: 1280px) {
@@ -389,7 +380,6 @@ const FormCard1 = styled.div`
   @media (min-width: 2500px) {
     .formTitle {
       font-size: 3rem;
-      /* padding: 2rem 0; */
     }
     label {
       font-size: 1rem;
@@ -433,7 +423,6 @@ const FormCard2 = styled.div`
     padding: 1rem 0;
   }
   form {
-    /* background: #cdcdcd; */
     margin: 0 auto;
     height: 100%;
     width: 80%;
@@ -462,13 +451,12 @@ const FormCard2 = styled.div`
   .inputBar {
     height: 2.5rem;
     border-radius: 40px;
-    /* border: 1px solid #3d3d3d; */
     border: none;
     margin: 0.3rem 0;
     padding-left: 1rem;
     outline: none;
-    ::placeholder{ 
-      opacity: .7; 
+    ::placeholder {
+      opacity: 0.7;
     }
   }
   .short {
@@ -513,7 +501,7 @@ const FormCard2 = styled.div`
     cursor: pointer;
   }
   .button:hover {
-    background: #126D6B;
+    background: #126d6b;
     box-shadow: 0px 15px 20px rgba(0, 0, 0, 0.2);
   }
   @media (max-width: 1280px) {
