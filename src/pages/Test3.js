@@ -35,14 +35,11 @@ const Test3 = ({ open, setOpen }) => {
             <FormCard1>
               <div className="formContainer">
                 <img src={logo} alt="" />
-                <h5>Vi tar hand om dina uppgifter HEJ</h5>
+                <h5>We take care of your data</h5>
                 <p>
-                  Chilla vill ge dig en säker och god upplevelse. För detta
-                  använder vi kakor. Vissa av dessa kakor är nödvändiga för att
-                  vår hemsida ska fungera, så ät inte upp de! Andra kakor
-                  hjälper dig få en skräddarsydd upplevelse. Genom att trycka på
-                  "ACCEPTERA" godkänner du användningen av de kakor som är
-                  markerade.{' '}
+                  Chilla wants to give you a safe and good experience. <br/>
+                  For this we use cookies. Some of these cookies are necessary to make our website work, så don't eat them! Other cookies help you get a tailored experience. <br/>By clicking "ACCEPT" you accept the use of the cookies that are marked.
+                  {' '}
                 </p>
                 <div className="switchGrid">
                   <div className="switchBox">
@@ -50,21 +47,21 @@ const Test3 = ({ open, setOpen }) => {
                       <input type="checkbox" defaultChecked />
                       <span className="slider"></span>
                     </label>
-                    <h4>Nödvändiga</h4>
+                    <h4>Necessary</h4>
                   </div>
                   <div className="switchBox">
                     <label className="switch">
                       <input type="checkbox" />
                       <span className="slider"></span>
                     </label>
-                    <h4>Funktionella</h4>
+                    <h4>Analytics</h4>
                   </div>
                   <div className="switchBox">
                     <label className="switch">
                       <input type="checkbox" />
                       <span className="slider"></span>
                     </label>
-                    <h4>Statistiska</h4>
+                    <h4>Social sharing</h4>
                   </div>
                   <div className="switchBox">
                     <label className="switch">
@@ -74,7 +71,7 @@ const Test3 = ({ open, setOpen }) => {
                     <h4>Marketing</h4>
                   </div>
                 </div>
-                <button onClick={handleClick}>ACCEPTERA</button>
+                <button onClick={handleClick}>ACCEPT</button>
               </div>
             </FormCard1>
           </div>
@@ -85,19 +82,15 @@ const Test3 = ({ open, setOpen }) => {
             <FormCard2>
               <div className="formContainer">
                 <img src={logo} alt="" />
-                <h5>Vi tar hand om dina uppgifter</h5>
+                <h5>We take care of your data</h5>
                 <p>
-                  Chilla vill ge dig en säker och god upplevelse. För detta
-                  använder vi kakor. Vissa av dessa kakor är nödvändiga för att
-                  vår hemsida ska fungera, så ät inte upp de! Andra kakor
-                  hjälper dig få en skräddarsydd upplevelse. Genom att trycka på
-                  "ACCEPTERA" godkänner du användningen av de kakor som är
-                  markerade.{' '}
+                Chilla wants to give you a safe and good experience. <br/>
+                  For this we use cookies. Some of these cookies are necessary to make our website work, så don't eat them! Other cookies help you get a tailored experience. <br/>By clicking "ACCEPT" you accept the use of the cookies that are marked.{' '}
                 </p>
                 <div className="buttons">
-                  <button onClick={handleClick}>ACCEPTERA</button>
+                  <button onClick={handleClick}>ACCEPT</button>
                   <button className="smallButton" onClick={handleClick}>
-                    Acceptera endast nödvändiga cookies
+                    Accept only necessary cookies
                   </button>
                 </div>
                 <div className="switchGrid">
@@ -105,19 +98,19 @@ const Test3 = ({ open, setOpen }) => {
                     <label className="form-control">
                       <input type="checkbox" defaultChecked />
                     </label>
-                    <h4>Nödvändiga</h4>
+                    <h4>Necessary</h4>
                   </div>
                   <div className="switchBox">
                     <label className="form-control">
                       <input type="checkbox" defaultChecked />
                     </label>
-                    <h4>Funktionella</h4>
+                    <h4>Analytics</h4>
                   </div>
                   <div className="switchBox">
                     <label className="form-control">
                       <input type="checkbox" defaultChecked />
                     </label>
-                    <h4>Statistiska</h4>
+                    <h4>Social Sharing</h4>
                   </div>
                   <div className="switchBox">
                     <label className="form-control">
