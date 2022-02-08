@@ -95,6 +95,7 @@ const HeartContainer = styled.div`
     font-weight: 500;
     color: var(--color);
     background: none;
+    cursor: pointer;
   }
 
   button:before {
